@@ -1,6 +1,6 @@
-# Application Web Multi-Étapes avec Streamlit
+# PDF_IA - Audit Pédagogique PDF
 
-Une application web interactive développée avec Streamlit et Python qui permet de gérer un processus en 3 étapes :
+Une application web interactive développée avec Streamlit et Python qui permet d'auditer des documents pédagogiques PDF avec intelligence artificielle.
 
 ## 🚀 Fonctionnalités
 
@@ -9,16 +9,18 @@ Une application web interactive développée avec Streamlit et Python qui permet
 - Informations détaillées sur le fichier PDF
 - Sauvegarde automatique dans le dossier `data/uploads/`
 
-### Étape 2 : Upload de Document PDF Support
-- Téléchargement de documents PDF uniquement
+### Étape 2 : Upload de Document PDF Support (Optionnel)
+- Téléchargement de documents PDF de support uniquement
 - Informations sur la taille et le type du fichier
 - Sauvegarde automatique dans le dossier `data/uploads/`
 
-### Étape 3 : Dashboard
-- Visualisation des fichiers PDF téléchargés
-- Statistiques sur les fichiers PDF (taille, type, etc.)
-- Graphiques et tableaux récapitulatifs
-- Option de réinitialisation pour recommencer le processus
+### Étape 3 : Audit et Dashboard
+- **Audit Standard** : Analyse globale du document pédagogique
+- **Audit Chapitre par Chapitre** : Analyse détaillée de chaque section
+- Scoring automatique basé sur une grille pédagogique
+- Recommandations personnalisées
+- Export des résultats en JSON
+- Visualisation des résultats avec graphiques et métriques
 
 ## 📋 Prérequis
 
@@ -73,16 +75,17 @@ ia agent/
 1. **Navigation** : Utilisez la barre latérale pour naviguer entre les étapes
 2. **Progression** : Une barre de progression indique votre avancement
 3. **Upload** : Glissez-déposez ou sélectionnez vos fichiers dans chaque étape
-4. **Visualisation** : Consultez le dashboard pour voir un résumé de vos uploads
-5. **Réinitialisation** : Utilisez le bouton "Recommencer" pour repartir de zéro
+4. **Audit** : Choisissez entre audit standard ou chapitre par chapitre
+5. **Résultats** : Consultez les scores, recommandations et analyses détaillées
+6. **Export** : Téléchargez les résultats au format JSON
 
 ## 🔧 Personnalisation
 
 Vous pouvez facilement personnaliser l'application en modifiant :
-- Les fonctionnalités PDF dans les fonctions `show_step1()` et `show_step2()`
-- Les visualisations dans la fonction `show_step3()`
-- Le style et la mise en page dans la configuration Streamlit
-- Ajouter des fonctionnalités d'analyse PDF avec des bibliothèques comme PyPDF2
+- La grille pédagogique dans `config/grille_pedagogique.json`
+- Les critères d'audit dans `backend/audit_engine.py`
+- L'interface utilisateur dans `app.py`
+- Les algorithmes de traitement PDF dans `backend/pdf_processor.py`
 
 ## 📝 Notes
 
@@ -90,6 +93,7 @@ Vous pouvez facilement personnaliser l'application en modifiant :
 - Les fichiers PDF sont sauvegardés localement dans le dossier `data/uploads/`
 - L'application utilise les sessions Streamlit pour maintenir l'état entre les étapes
 - Tous les fichiers PDF sont traités côté serveur pour plus de sécurité
+- Les audits sont sauvegardés automatiquement avec horodatage
 
 ## 🆘 Support
 
