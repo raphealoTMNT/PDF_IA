@@ -1,8 +1,8 @@
 {
   "metadata": {
     "created_date": "2025-01-09",
-    "last_updated": "2025-09-28T13:35:58.563839",
-    "total_audits": 17,
+    "last_updated": "2025-09-28T16:38:38.090604",
+    "total_audits": 19,
     "version": "1.0"
   },
   "audits": [
@@ -158,6 +158,24 @@
       "grade": "E",
       "json_file": "data/audits\\audit_Pratique_de_MySQL_et_PHP.pdf_20250928_133558.json",
       "word_count": 175560
+    },
+    {
+      "id": 18,
+      "filename": "Programmer en langage C  Cours et exercices corrigés - 5ème Edition.pdf",
+      "audit_date": "2025-09-28T14:46:20.405634",
+      "final_score": 0.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_Programmer_en_langage_C__Cours_et_exercices_corrigés_-_5ème_Edition.pdf_20250928_144620.json",
+      "word_count": 88989
+    },
+    {
+      "id": 19,
+      "filename": "courscomplet.pdf",
+      "audit_date": "2025-09-28T16:38:38.086110",
+      "final_score": 80.0,
+      "grade": "B",
+      "json_file": "data/audits\\audit_courscomplet.pdf_20250928_163838.json",
+      "word_count": 18338
     }
   ]
 }

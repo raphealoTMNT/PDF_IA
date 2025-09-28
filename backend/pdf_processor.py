@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime
 from pathlib import Path
-import PyPDF2
+import fitz  # PyMuPDF - Plus sécurisé que PyPDF2
 import re
 
 class PDFProcessor:
@@ -12,18 +12,21 @@ class PDFProcessor:
         
     def extract_text_from_pdf(self, pdf_path):
         """
-        Extrait le texte d'un fichier PDF
+        Extrait le texte d'un fichier PDF en utilisant PyMuPDF (plus sécurisé)
         """
         try:
-            with open(pdf_path, 'rb') as file:
-                pdf_reader = PyPDF2.PdfReader(file)
-                text = ""
-                
-                for page_num in range(len(pdf_reader.pages)):
-                    page = pdf_reader.pages[page_num]
-                    text += page.extract_text() + "\n"
-                
-                return text.strip()
+            # Ouverture du PDF avec PyMuPDF
+            doc = fitz.open(pdf_path)
+            text = ""
+            
+            # Extraction du texte de chaque page
+            for page_num in range(len(doc)):
+                page = doc.load_page(page_num)
+                text += page.get_text() + "\n"
+            
+            doc.close()
+            return text.strip()
+            
         except Exception as e:
             print(f"Erreur lors de l'extraction du PDF {pdf_path}: {str(e)}")
             return None

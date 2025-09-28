@@ -6,12 +6,18 @@ import plotly.express as px
 import plotly.graph_objects as go
 from datetime import datetime
 from backend.audit_engine import PedagogicalAuditEngine
+
+from backend.encryption_manager import EncryptionManager
 from reportlab.lib.pagesizes import letter
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.units import inch
 import io
+from dotenv import load_dotenv
+
+# Charger les variables d'environnement
+load_dotenv()
 
 # Configuration de la page
 st.set_page_config(
@@ -21,8 +27,15 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Clé API Groq (à sécuriser en production)
-GROQ_API_KEY = "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"
+# Initialisation du gestionnaire de chiffrement
+if 'encryption_manager' not in st.session_state:
+    st.session_state.encryption_manager = EncryptionManager()
+
+# Clé API Groq sécurisée
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+if not GROQ_API_KEY:
+    st.error("❌ Clé API GROQ non configurée. Veuillez définir GROQ_API_KEY dans le fichier .env")
+    st.stop()
 
 # Initialisation des dossiers
 for directory in ["data/uploads", "data/audits", "config"]:
@@ -42,9 +55,12 @@ if 'current_audit' not in st.session_state:
 if 'audit_in_progress' not in st.session_state:
     st.session_state.audit_in_progress = False
 
-# Nouvelles variables pour le workflow en 3 étapes
+# Nouvelles variables pour le workflow en 4 étapes (avec sélection de matière)
 if 'current_step' not in st.session_state:
-    st.session_state.current_step = 1
+    st.session_state.current_step = 0
+
+if 'selected_subject' not in st.session_state:
+    st.session_state.selected_subject = None
 
 if 'module_file' not in st.session_state:
     st.session_state.module_file = None
@@ -194,24 +210,114 @@ def export_to_pdf(audit_report):
     return buffer
 
 def show_new_audit_workflow():
-    """Nouveau workflow d'audit en 3 étapes."""
+    """Nouveau workflow d'audit en 4 étapes (avec sélection de matière)."""
     
     if not st.session_state.audit_engine:
         st.error("❌ Moteur d'audit non disponible. Vérifiez la configuration.")
         return
     
     # Affichage selon l'étape actuelle
-    if st.session_state.current_step == 1:
+    if st.session_state.current_step == 0:
+        show_step0_subject_selection()
+    elif st.session_state.current_step == 1:
         show_step1_module_upload()
     elif st.session_state.current_step == 2:
         show_step2_support_upload()
     elif st.session_state.current_step == 3:
         show_step3_analysis_dashboard()
 
+def show_step0_subject_selection():
+    """Étape 0: Sélection de la matière d'expertise."""
+    st.header("🎯 Étape 0: Sélection de la Matière")
+    st.write("Choisissez la matière pour laquelle l'IA se comportera comme un expert pédagogique spécialisé.")
+    
+    # Récupération des matières disponibles
+    available_subjects = st.session_state.audit_engine.get_available_subjects()
+    
+    if not available_subjects:
+        st.error("❌ Aucune matière d'expertise disponible. Vérifiez le fichier de configuration.")
+        return
+    
+    # Sélection de la matière
+    selected_subject = st.selectbox(
+        "📚 Sélectionnez votre matière :",
+        options=available_subjects,
+        index=available_subjects.index(st.session_state.get('selected_subject', available_subjects[0])) if st.session_state.get('selected_subject') in available_subjects else 0,
+        help="L'IA adaptera son analyse selon l'expertise de la matière choisie"
+    )
+    
+    # Affichage des informations sur l'expert sélectionné
+    if selected_subject:
+        expert_info = st.session_state.audit_engine.get_subject_expert_info(selected_subject)
+        
+        if expert_info:
+            st.info(f"🧠 **Expert sélectionné :** {selected_subject}")
+            
+            with st.expander("ℹ️ Détails de l'expertise", expanded=False):
+                st.write("**Concepts clés évalués :**")
+                for concept in expert_info.get('expertise', {}).get('key_concepts', []):
+                    st.write(f"• {concept}")
+                
+                st.write("**Critères d'évaluation spécialisés :**")
+                for criterion in expert_info.get('evaluation_criteria', []):
+                    st.write(f"• {criterion}")
+                
+                st.write("**Focus pédagogique :**")
+                for focus in expert_info.get('pedagogical_focus', []):
+                    st.write(f"• {focus}")
+    
+    # Bouton de confirmation
+    col1, col2 = st.columns([1, 3])
+    
+    with col1:
+        if st.button("✅ Confirmer la Matière", type="primary"):
+            # Sauvegarde de la matière sélectionnée
+            st.session_state.selected_subject = selected_subject
+            st.session_state.audit_engine.set_subject_context(selected_subject)
+            
+            st.success(f"✅ Matière '{selected_subject}' sélectionnée avec succès!")
+            st.session_state.current_step = 1
+            st.rerun()
+    
+    # Affichage de la matière déjà sélectionnée si présente
+    if st.session_state.get('selected_subject'):
+        st.success(f"✅ Matière déjà sélectionnée: {st.session_state.selected_subject}")
+        
+        col1, col2 = st.columns([1, 3])
+        
+        with col1:
+            if st.button("🔄 Changer de Matière"):
+                st.session_state.selected_subject = None
+                st.session_state.audit_engine.set_subject_context(None)
+                st.rerun()
+        
+        with col2:
+            if st.button("➡️ Continuer vers l'Upload"):
+                st.session_state.current_step = 1
+                st.rerun()
+
 def show_step1_module_upload():
     """Étape 1: Upload du fichier module PDF."""
     st.header("📄 Étape 1: Téléchargement du Module")
+    
+    # Affichage de la matière sélectionnée
+    if st.session_state.get('selected_subject'):
+        st.info(f"🧠 **Expert actif :** {st.session_state.selected_subject}")
+    else:
+        st.warning("⚠️ Aucune matière sélectionnée. Retournez à l'étape 0.")
+        if st.button("⬅️ Retour à la Sélection de Matière"):
+            st.session_state.current_step = 0
+            st.rerun()
+        return
+    
     st.write("Téléchargez le fichier PDF du module pédagogique à auditer (obligatoire).")
+    
+    # Bouton de retour vers l'étape 0
+    col_back, col_space = st.columns([1, 3])
+    with col_back:
+        if st.button("⬅️ Retour Étape 0", key="back_to_step0_main"):
+            st.session_state.current_step = 0
+            st.rerun()
     
     # Upload de fichier module
     uploaded_file = st.file_uploader(
@@ -294,29 +400,12 @@ def show_step1_module_upload():
                 except Exception as e:
                     st.error(f"Erreur lors de la génération de la prévisualisation: {str(e)}")
         
-        # Bouton pour passer à l'étape suivante
-        col1, col2, col3 = st.columns([1, 1, 2])
+        # Boutons de navigation
+        col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
         
         with col1:
-            if st.button("➡️ Étape Suivante", type="primary"):
-                st.session_state.current_step = 2
-                st.rerun()
-        
-        with col2:
-            if st.button("⏭️ Passer à l'Analyse", help="Analyser uniquement le module sans document support"):
-                st.session_state.current_step = 3
-                st.rerun()
-    
-    # Affichage du fichier déjà uploadé si présent
-    elif st.session_state.module_file:
-        st.success(f"✅ Module déjà téléchargé: {st.session_state.module_file}")
-        
-        col1, col2, col3 = st.columns([1, 1, 2])
-        
-        with col1:
-            if st.button("🔄 Changer Module"):
-                st.session_state.module_file = None
-                st.session_state.module_file_path = None
+            if st.button("⬅️ Retour Étape 0", key="back_to_step0_uploaded"):
+                st.session_state.current_step = 0
                 st.rerun()
         
         with col2:
@@ -325,6 +414,33 @@ def show_step1_module_upload():
                 st.rerun()
         
         with col3:
+            if st.button("⏭️ Passer à l'Analyse", help="Analyser uniquement le module sans document support"):
+                st.session_state.current_step = 3
+                st.rerun()
+    
+    # Affichage du fichier déjà uploadé si présent
+    elif st.session_state.module_file:
+        st.success(f"✅ Module déjà téléchargé: {st.session_state.module_file}")
+        
+        col1, col2, col3, col4 = st.columns([1, 1, 1, 1])
+        
+        with col1:
+            if st.button("⬅️ Retour Étape 0", key="back_to_step0_existing"):
+                st.session_state.current_step = 0
+                st.rerun()
+        
+        with col2:
+            if st.button("🔄 Changer Module"):
+                st.session_state.module_file = None
+                st.session_state.module_file_path = None
+                st.rerun()
+        
+        with col3:
+            if st.button("➡️ Étape Suivante", type="primary"):
+                st.session_state.current_step = 2
+                st.rerun()
+        
+        with col4:
             if st.button("⏭️ Passer à l'Analyse", help="Analyser uniquement le module sans document support"):
                 st.session_state.current_step = 3
                 st.rerun()
@@ -931,6 +1047,17 @@ def show_history_page():
         st.error("❌ Moteur d'audit non disponible.")
         return
     
+    # Affichage des détails d'audit si un audit est sélectionné
+    if st.session_state.current_audit:
+        col1, col2 = st.columns([1, 4])
+        with col1:
+            if st.button("⬅️ Retour à l'historique"):
+                st.session_state.current_audit = None
+                st.rerun()
+        
+        show_audit_results(st.session_state.current_audit)
+        return
+    
     # Chargement de l'historique
     history = st.session_state.audit_engine.get_audit_history()
     
@@ -1009,6 +1136,8 @@ def main():
     # Sidebar pour la navigation
     with st.sidebar:
         st.title("🎓 Audit Pédagogique")
+        
+        st.divider()
         st.write("Navigation")
         
         page = st.radio(
@@ -1022,6 +1151,11 @@ def main():
         # Affichage des étapes pour l'audit
         if page == "📋 Étapes de l'Audit":
             st.write("**📋 Progression de l'Audit**")
+            
+            # Étape 0
+            step0_icon = "✅" if st.session_state.selected_subject else "🎯"
+            step0_color = "green" if st.session_state.selected_subject else "gray"
+            st.markdown(f":{step0_color}[{step0_icon} Étape 0: Sélection Matière]")
             
             # Étape 1
             step1_icon = "✅" if st.session_state.module_file else "📄"
@@ -1045,6 +1179,7 @@ def main():
             st.write("""
             **Comment utiliser l'application:**
             
+            0. **Étape 0**: Sélectionnez la matière d'expertise (Java, Base de données, Python, Algorithmique)
             1. **Étape 1**: Téléchargez le fichier module PDF (obligatoire)
             2. **Étape 2**: Téléchargez un document support PDF (optionnel)
             3. **Étape 3**: Lancez l'analyse et consultez les résultats

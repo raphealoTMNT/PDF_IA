@@ -1,0 +1,144 @@
+{
+  "subjects": {
+    "java": {
+      "name": "Java",
+      "icon": "☕",
+      "description": "Expert en programmation orientée objet Java",
+      "expertise": {
+        "key_concepts": [
+          "Classes et objets",
+          "Héritage et polymorphisme",
+          "Encapsulation",
+          "Interfaces et classes abstraites",
+          "Collections (List, Set, Map)",
+          "Gestion des exceptions",
+          "Threads et concurrence",
+          "Streams et API fonctionnelle",
+          "Design patterns",
+          "JVM et garbage collection"
+        ],
+        "evaluation_criteria": {
+          "code_quality": "Évaluation de la qualité du code, conventions de nommage, structure des classes",
+          "oop_principles": "Application correcte des principes de la POO",
+          "best_practices": "Respect des bonnes pratiques Java (SOLID, clean code)",
+          "practical_examples": "Pertinence et clarté des exemples de code",
+          "error_handling": "Gestion appropriée des exceptions",
+          "performance": "Considérations de performance et optimisation"
+        },
+        "pedagogical_focus": [
+          "Progression logique des concepts OOP",
+          "Exemples concrets et pratiques",
+          "Exercices de programmation adaptés",
+          "Projets intégrateurs",
+          "Debugging et résolution de problèmes"
+        ]
+      },
+      "analysis_prompt": "En tant qu'expert pédagogique Java, analysez ce document en vous concentrant sur la progression des concepts de programmation orientée objet, la qualité des exemples de code, l'application des design patterns, et la pertinence des exercices pratiques. Évaluez particulièrement la clarté des explications sur les classes, l'héritage, le polymorphisme, et les collections Java."
+    },
+    "database": {
+      "name": "Base de données",
+      "icon": "🗄️",
+      "description": "Expert en systèmes de gestion de bases de données",
+      "expertise": {
+        "key_concepts": [
+          "Modèle relationnel",
+          "Normalisation (1NF, 2NF, 3NF, BCNF)",
+          "SQL (DDL, DML, DCL)",
+          "Jointures et requêtes complexes",
+          "Index et optimisation",
+          "Transactions et ACID",
+          "Contraintes d'intégrité",
+          "Procédures stockées et triggers",
+          "NoSQL et bases alternatives",
+          "Sécurité des données"
+        ],
+        "evaluation_criteria": {
+          "schema_design": "Qualité de la conception des schémas de base de données",
+          "normalization": "Application correcte des formes normales",
+          "sql_queries": "Pertinence et efficacité des requêtes SQL",
+          "data_integrity": "Gestion des contraintes et de l'intégrité des données",
+          "performance": "Optimisation des requêtes et utilisation des index",
+          "security": "Aspects de sécurité et gestion des accès"
+        },
+        "pedagogical_focus": [
+          "Progression du modèle conceptuel au modèle physique",
+          "Exemples de schémas réalistes",
+          "Exercices de requêtage progressifs",
+          "Cas d'usage concrets",
+          "Bonnes pratiques de conception"
+        ]
+      },
+      "analysis_prompt": "En tant qu'expert pédagogique en bases de données, analysez ce document en vous concentrant sur la progression des concepts de modélisation, la qualité des schémas présentés, la pertinence des requêtes SQL, l'application des règles de normalisation, et l'efficacité des exercices pratiques. Évaluez particulièrement la clarté des explications sur les jointures, les contraintes d'intégrité, et l'optimisation des performances."
+    },
+    "python": {
+      "name": "Python",
+      "icon": "🐍",
+      "description": "Expert en programmation Python et ses applications",
+      "expertise": {
+        "key_concepts": [
+          "Syntaxe et structures de données Python",
+          "Programmation orientée objet en Python",
+          "Modules et packages",
+          "Gestion des fichiers et exceptions",
+          "Programmation fonctionnelle",
+          "Décorateurs et métaclasses",
+          "Bibliothèques standard",
+          "Data Science (NumPy, Pandas, Matplotlib)",
+          "Web development (Flask, Django)",
+          "Testing et debugging"
+        ],
+        "evaluation_criteria": {
+          "pythonic_code": "Respect des conventions Python (PEP 8, idiomes Python)",
+          "data_structures": "Utilisation appropriée des structures de données Python",
+          "libraries": "Intégration et utilisation des bibliothèques",
+          "code_organization": "Organisation du code en modules et packages",
+          "error_handling": "Gestion des exceptions et debugging",
+          "practical_applications": "Applications concrètes et projets réalistes"
+        },
+        "pedagogical_focus": [
+          "Progression de la syntaxe de base aux concepts avancés",
+          "Exemples interactifs et pratiques",
+          "Projets d'application réels",
+          "Bonnes pratiques de développement",
+          "Écosystème Python et bibliothèques"
+        ]
+      },
+      "analysis_prompt": "En tant qu'expert pédagogique Python, analysez ce document en vous concentrant sur la progression des concepts Python, la qualité du code présenté, l'utilisation des bibliothèques appropriées, le respect des conventions Python (PEP 8), et la pertinence des exercices pratiques. Évaluez particulièrement la clarté des explications sur les structures de données, la programmation orientée objet, et les applications pratiques."
+    },
+    "algorithms": {
+      "name": "Algorithmique",
+      "icon": "🧮",
+      "description": "Expert en algorithmique et structures de données",
+      "expertise": {
+        "key_concepts": [
+          "Complexité algorithmique (Big O)",
+          "Structures de données (listes, piles, files, arbres, graphes)",
+          "Algorithmes de tri et de recherche",
+          "Récursivité et programmation dynamique",
+          "Algorithmes gloutons",
+          "Algorithmes de graphes (parcours, plus court chemin)",
+          "Hachage et tables de hachage",
+          "Algorithmes de chaînes de caractères",
+          "Optimisation et heuristiques",
+          "Preuves de correction et d'efficacité"
+        ],
+        "evaluation_criteria": {
+          "complexity_analysis": "Analyse correcte de la complexité temporelle et spatiale",
+          "algorithm_design": "Conception d'algorithmes efficaces et corrects",
+          "data_structure_choice": "Choix approprié des structures de données",
+          "mathematical_rigor": "Rigueur mathématique dans les preuves et analyses",
+          "implementation": "Qualité de l'implémentation des algorithmes",
+          "optimization": "Techniques d'optimisation et amélioration des performances"
+        },
+        "pedagogical_focus": [
+          "Progression logique des concepts algorithmiques",
+          "Analyse de complexité systématique",
+          "Exemples d'implémentation clairs",
+          "Exercices de conception d'algorithmes",
+          "Comparaison d'approches alternatives"
+        ]
+      },
+      "analysis_prompt": "En tant qu'expert pédagogique en algorithmique, analysez ce document en vous concentrant sur la rigueur de l'analyse de complexité, la progression des structures de données, la qualité des algorithmes présentés, la clarté des preuves de correction, et la pertinence des exercices de conception. Évaluez particulièrement la progression pédagogique des concepts, de la complexité simple aux algorithmes avancés."
+    }
+  }
+}

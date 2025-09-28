@@ -10,7 +10,7 @@
     "introduction_objectifs": {
       "name": "Introduction & Objectifs",
       "description": "Présence et clarté de l'introduction et des objectifs pédagogiques",
-      "weight": 15,
+      "weight": 12,
       "max_score": 5,
       "indicators": [
         "Présence d'une introduction claire",
@@ -23,7 +23,7 @@
     "structure_progression": {
       "name": "Structure & Progression Logique",
       "description": "Organisation logique et progression pédagogique du contenu",
-      "weight": 15,
+      "weight": 12,
       "max_score": 5,
       "indicators": [
         "Plan structuré et visible",
@@ -36,7 +36,7 @@
     "clarte_langage": {
       "name": "Clarté du Langage",
       "description": "Qualité de la rédaction et accessibilité du vocabulaire",
-      "weight": 12,
+      "weight": 10,
       "max_score": 5,
       "indicators": [
         "Vocabulaire adapté au niveau",
@@ -49,7 +49,7 @@
     "exemples_concrets": {
       "name": "Exemples Concrets",
       "description": "Présence et qualité des exemples illustratifs",
-      "weight": 12,
+      "weight": 10,
       "max_score": 5,
       "indicators": [
         "Exemples pertinents et variés",
@@ -62,7 +62,7 @@
     "exercices_activites": {
       "name": "Exercices & Activités",
       "description": "Présence et qualité des activités d'apprentissage",
-      "weight": 15,
+      "weight": 12,
       "max_score": 5,
       "indicators": [
         "Exercices d'application",
@@ -75,7 +75,7 @@
     "methodes_evaluation": {
       "name": "Méthodes d'Évaluation",
       "description": "Présence de modalités d'évaluation des apprentissages",
-      "weight": 10,
+      "weight": 8,
       "max_score": 5,
       "indicators": [
         "Critères d'évaluation définis",
@@ -85,10 +85,49 @@
         "Feedback constructif"
       ]
     },
+    "interactivite_engagement": {
+      "name": "Interactivité & Engagement",
+      "description": "Éléments favorisant l'engagement et la participation active",
+      "weight": 8,
+      "max_score": 5,
+      "indicators": [
+        "Éléments interactifs présents",
+        "Questions pour stimuler la réflexion",
+        "Activités collaboratives",
+        "Gamification ou défis",
+        "Personnalisation du parcours"
+      ]
+    },
+    "accessibilite_inclusion": {
+      "name": "Accessibilité & Inclusion",
+      "description": "Prise en compte de la diversité des apprenants et de l'accessibilité",
+      "weight": 6,
+      "max_score": 5,
+      "indicators": [
+        "Contenu accessible (handicaps)",
+        "Différents styles d'apprentissage",
+        "Exemples diversifiés et inclusifs",
+        "Adaptabilité du rythme",
+        "Support multimédia varié"
+      ]
+    },
+    "actualite_pertinence": {
+      "name": "Actualité & Pertinence",
+      "description": "Mise à jour et pertinence du contenu par rapport au contexte actuel",
+      "weight": 6,
+      "max_score": 5,
+      "indicators": [
+        "Informations récentes et actualisées",
+        "Pertinence professionnelle",
+        "Évolution des pratiques intégrée",
+        "Technologies et outils actuels",
+        "Tendances du domaine"
+      ]
+    },
     "resume_conclusion": {
       "name": "Résumé / Conclusion",
       "description": "Présence d'une synthèse et conclusion appropriée",
-      "weight": 10,
+      "weight": 8,
       "max_score": 5,
       "indicators": [
         "Résumé des points clés",
@@ -101,7 +140,7 @@
     "references_ressources": {
       "name": "Références & Ressources",
       "description": "Qualité et pertinence des références et ressources complémentaires",
-      "weight": 11,
+      "weight": 8,
       "max_score": 5,
       "indicators": [
         "Bibliographie présente",
@@ -126,12 +165,118 @@
     "conclusion"
   ],
   "keywords": {
-    "introduction_objectifs": ["introduction", "objectif", "but", "compétence", "prérequis", "public", "cible"],
-    "structure_progression": ["plan", "sommaire", "chapitre", "section", "partie", "étape"],
-    "exemples_concrets": ["exemple", "illustration", "cas", "pratique", "concret", "application"],
-    "exercices_activites": ["exercice", "activité", "travail", "pratique", "application", "projet"],
-    "methodes_evaluation": ["évaluation", "test", "contrôle", "examen", "note", "correction"],
-    "resume_conclusion": ["résumé", "conclusion", "synthèse", "bilan", "récapitulatif"],
-    "references_ressources": ["référence", "bibliographie", "source", "ressource", "lien", "documentation"]
+    "introduction_objectifs": [
+      "introduction", "objectif", "but", "compétence", "prérequis", "public", "cible",
+      "finalité", "visée", "intention", "apprentissage", "acquis", "savoir", "savoir-faire",
+      "savoir-être", "capacité", "aptitude", "niveau", "profil", "apprenant", "étudiant",
+      "formation", "cursus", "parcours", "programme", "syllabus", "référentiel",
+      "compétences transversales", "soft skills", "hard skills", "learning outcomes",
+      "objectifs pédagogiques", "objectifs opérationnels", "taxonomie", "bloom"
+    ],
+    "structure_progression": [
+      "plan", "sommaire", "chapitre", "section", "partie", "étape",
+      "organisation", "architecture", "structuration", "hiérarchie", "arborescence",
+      "séquence", "progression", "enchaînement", "articulation", "cohérence",
+      "logique", "ordre", "chronologie", "déroulement", "planification",
+      "module", "unité", "leçon", "cours", "séance", "session",
+      "table des matières", "index", "navigation", "parcours pédagogique",
+      "scénario pédagogique", "ingénierie pédagogique", "design pédagogique"
+    ],
+    "clarte_langage": [
+      "clarté", "clair", "précis", "compréhensible", "accessible", "lisible",
+      "vocabulaire", "terminologie", "jargon", "définition", "explication",
+      "style", "rédaction", "écriture", "formulation", "expression",
+      "simplicité", "concision", "fluidité", "cohérence linguistique",
+      "niveau de langue", "registre", "ton", "pédagogie", "didactique"
+    ],
+    "exemples_concrets": [
+      "exemple", "illustration", "cas", "pratique", "concret", "application",
+      "démonstration", "modèle", "prototype", "échantillon", "spécimen",
+      "cas d'usage", "cas d'étude", "étude de cas", "use case", "scenario",
+      "situation", "contexte", "mise en situation", "simulation", "jeu de rôle",
+      "analogie", "métaphore", "comparaison", "parallèle", "référence",
+      "expérience", "témoignage", "retour d'expérience", "best practice",
+      "bonnes pratiques", "pattern", "modèle", "template", "gabarit",
+      "schéma", "diagramme", "graphique", "figure", "image", "photo",
+      "capture d'écran", "screenshot", "vidéo", "animation", "infographie"
+    ],
+    "exercices_activites": [
+      "exercice", "activité", "travail", "pratique", "application", "projet",
+      "atelier", "laboratoire", "tp", "travaux pratiques", "td", "travaux dirigés",
+      "quiz", "qcm", "questionnaire", "sondage", "enquête", "test",
+      "devoir", "assignment", "homework", "mission", "tâche", "challenge",
+      "problème", "énigme", "puzzle", "jeu", "game", "serious game",
+      "simulation", "expérimentation", "manipulation", "exploration",
+      "recherche", "investigation", "analyse", "étude", "observation",
+      "production", "création", "réalisation", "développement", "conception",
+      "brainstorming", "débat", "discussion", "forum", "échange",
+      "collaboration", "coopération", "travail en équipe", "peer learning",
+      "apprentissage par les pairs", "learning by doing", "hands-on"
+    ],
+    "methodes_evaluation": [
+      "évaluation", "test", "contrôle", "examen", "note", "correction",
+      "assessment", "grading", "notation", "barème", "grille", "critères",
+      "indicateurs", "rubrique", "portfolio", "dossier", "rapport",
+      "soutenance", "présentation", "oral", "écrit", "pratique",
+      "formative", "sommative", "diagnostique", "pronostique", "certificative",
+      "auto-évaluation", "co-évaluation", "peer assessment", "feedback",
+      "retour", "commentaire", "annotation", "remarque", "conseil",
+      "validation", "certification", "accréditation", "reconnaissance",
+      "compétences", "acquis", "learning analytics", "traces d'apprentissage",
+      "performance", "réussite", "échec", "remédiation", "différenciation",
+      "personnalisation", "adaptive learning", "learning path"
+    ],
+    "interactivite_engagement": [
+      "interactif", "interactivité", "engagement", "participation", "implication",
+      "motivation", "stimulation", "dynamique", "vivant", "captivant",
+      "question", "interrogation", "réflexion", "pensée critique", "analyse",
+      "collaboration", "coopération", "travail en groupe", "peer-to-peer",
+      "gamification", "jeu", "défi", "challenge", "compétition", "récompense",
+      "personnalisation", "adaptation", "choix", "autonomie", "liberté",
+      "multimédia", "vidéo", "audio", "animation", "simulation", "réalité virtuelle"
+    ],
+    "accessibilite_inclusion": [
+      "accessibilité", "accessible", "inclusion", "inclusif", "diversité",
+      "handicap", "déficience", "adaptation", "aménagement", "compensation",
+      "style d'apprentissage", "profil cognitif", "intelligence multiple",
+      "visuel", "auditif", "kinesthésique", "lecture", "écoute", "manipulation",
+      "rythme", "tempo", "vitesse", "progression individuelle", "différenciation",
+      "égalité", "équité", "non-discrimination", "respect", "tolérance",
+      "culture", "origine", "genre", "âge", "expérience", "background"
+    ],
+    "actualite_pertinence": [
+      "actualité", "actuel", "récent", "moderne", "contemporain", "up-to-date",
+      "pertinence", "pertinent", "approprié", "adapté", "contextualisé",
+      "mise à jour", "révision", "évolution", "changement", "innovation",
+      "tendance", "trend", "émergent", "futur", "prospective", "anticipation",
+      "professionnel", "métier", "emploi", "carrière", "compétences métier",
+      "marché du travail", "industrie", "secteur", "domaine", "spécialisation"
+    ],
+    "resume_conclusion": [
+      "résumé", "conclusion", "synthèse", "bilan", "récapitulatif",
+      "summary", "abstract", "digest", "condensé", "abrégé", "extrait",
+      "points clés", "key points", "takeaways", "enseignements", "leçons",
+      "acquis", "apprentissages", "consolidation", "renforcement",
+      "mémorisation", "ancrage", "fixation", "stabilisation",
+      "ouverture", "perspective", "prolongement", "suite", "continuation",
+      "approfondissement", "élargissement", "généralisation", "transfert",
+      "application", "mise en œuvre", "implémentation", "déploiement",
+      "what's next", "next steps", "prochaines étapes", "pour aller plus loin"
+    ],
+    "references_ressources": [
+      "référence", "bibliographie", "source", "ressource", "lien", "documentation",
+      "webographie", "sitographie", "médiagraphie", "filmographie",
+      "citation", "quote", "mention", "renvoi", "note", "annotation",
+      "livre", "ouvrage", "manuel", "guide", "handbook", "textbook",
+      "article", "paper", "publication", "revue", "journal", "magazine",
+      "site web", "website", "blog", "wiki", "forum", "communauté",
+      "vidéo", "podcast", "webinar", "mooc", "cours en ligne", "e-learning",
+      "base de données", "repository", "archive", "collection", "corpus",
+      "api", "sdk", "framework", "library", "outil", "logiciel", "software",
+      "plateforme", "environnement", "écosystème", "infrastructure",
+      "standard", "norme", "protocole", "spécification", "rfc",
+      "open source", "creative commons", "licence", "copyright", "droits d'auteur",
+      "peer-reviewed", "comité de lecture", "validation scientifique"
+    ]
   }
 }

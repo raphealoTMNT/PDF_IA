@@ -4,7 +4,7 @@ import re
 import time
 from datetime import datetime
 from typing import Dict, List, Tuple, Any
-from openai import OpenAI
+from openai import OpenAI  # Utilisé pour l'API Groq via le SDK OpenAI
 from backend.pdf_processor import PDFProcessor
 import fitz  # PyMuPDF
 import base64
@@ -12,25 +12,28 @@ from io import BytesIO
 
 class PedagogicalAuditEngine:
     """
-    Moteur d'audit pédagogique utilisant l'IA pour évaluer des contenus éducatifs
+    Moteur d'audit pédagogique utilisant Groq AI pour évaluer des contenus éducatifs
     selon une grille de critères prédéfinie.
     """
     
-    def __init__(self, api_key: str, config_path: str = "config/grille_pedagogique.json"):
+    def __init__(self, groq_api_key: str, config_path: str = "config/grille_pedagogique.json"):
         """
         Initialise le moteur d'audit avec la clé API Groq et la grille d'évaluation.
         
         Args:
-            api_key (str): Clé API Groq
+            groq_api_key (str): Clé API Groq
             config_path (str): Chemin vers la grille pédagogique JSON
         """
-        self.client = OpenAI(
-            api_key=api_key,
+        # Client Groq utilisant le SDK OpenAI avec l'endpoint Groq
+        self.groq_client = OpenAI(
+            api_key=groq_api_key,
             base_url="https://api.groq.com/openai/v1"
         )
         self.pdf_processor = PDFProcessor()
         self.config_path = config_path
         self.grille = self._load_grille()
+        self.subject_experts = self._load_subject_experts()
+        self.current_subject = None
         
     def _load_grille(self) -> Dict:
         """Charge la grille pédagogique depuis le fichier JSON."""
@@ -40,6 +43,32 @@ class PedagogicalAuditEngine:
         except FileNotFoundError:
             raise FileNotFoundError(f"Grille pédagogique non trouvée : {self.config_path}")
     
+    def _load_subject_experts(self) -> Dict:
+        """Charge les profils d'experts par matière."""
+        try:
+            with open("config/subject_experts.json", 'r', encoding='utf-8') as f:
+                return json.load(f)
+        except FileNotFoundError:
+            print("Fichier des experts par matière non trouvé, utilisation du mode générique")
+            return {"subjects": {}}
+    
+    def set_subject_context(self, subject_key: str):
+        """Définit le contexte de matière pour l'audit."""
+        if subject_key in self.subject_experts.get("subjects", {}):
+            self.current_subject = subject_key
+            print(f"Contexte expert défini pour: {self.subject_experts['subjects'][subject_key]['name']}")
+        else:
+            self.current_subject = None
+            print("Contexte générique utilisé")
+    
+    def get_available_subjects(self) -> List[str]:
+        """Retourne la liste des matières disponibles."""
+        return list(self.subject_experts.get("subjects", {}).keys())
+    
+    def get_subject_expert_info(self, subject: str) -> Dict:
+        """Retourne les informations détaillées d'un expert pour une matière donnée."""
+        return self.subject_experts.get("subjects", {}).get(subject, {})
+
     def _extract_text_content(self, pdf_path: str) -> Dict:
         """Extrait le contenu textuel du PDF."""
         result = self.pdf_processor.process_pdf_file(pdf_path)
@@ -194,7 +223,7 @@ class PedagogicalAuditEngine:
         """
         
         try:
-            response = self.client.chat.completions.create(
+            response = self.groq_client.chat.completions.create(
                 model="llama-3.3-70b-versatile",
                 messages=[
                     {"role": "system", "content": "Tu es un expert en évaluation pédagogique. Réponds uniquement en JSON valide."},
@@ -240,9 +269,29 @@ class PedagogicalAuditEngine:
             Dict: Résultat de l'analyse avec score, commentaires et preuves
         """
         
+        # Ajout du contexte expert si une matière est sélectionnée
+        expert_context = ""
+        if self.current_subject and self.current_subject in self.subject_experts.get("subjects", {}):
+            subject_data = self.subject_experts["subjects"][self.current_subject]
+            expertise = subject_data.get('expertise', {})
+            expert_context = f"""
+            
+CONTEXTE EXPERT - {subject_data['name']} :
+{subject_data['analysis_prompt']}
+
+CONCEPTS CLÉS À ÉVALUER :
+{', '.join(expertise.get('key_concepts', []))}
+
+CRITÈRES D'ÉVALUATION SPÉCIALISÉS :
+{chr(10).join([f"- {key}: {value}" for key, value in expertise.get('evaluation_criteria', {}).items()])}
+
+FOCUS PÉDAGOGIQUE :
+{chr(10).join([f"- {focus}" for focus in expertise.get('pedagogical_focus', [])])}
+            """
+        
         # Construction du prompt pour l'IA
         prompt = f"""
-        Tu es un expert en pédagogie chargé d'évaluer un contenu éducatif selon le critère suivant :
+        Tu es un expert en pédagogie{f" spécialisé en {self.subject_experts['subjects'][self.current_subject]['name']}" if self.current_subject else ""} chargé d'évaluer un contenu éducatif selon le critère suivant :
         
         CRITÈRE : {criterion_data['name']}
         DESCRIPTION : {criterion_data['description']}
@@ -251,17 +300,18 @@ class PedagogicalAuditEngine:
         
         MOTS-CLÉS À RECHERCHER :
         {', '.join(self.grille['keywords'].get(criterion_key, []))}
+        {expert_context}
         
         CONTENU À ANALYSER :
         {text_content[:4000]}  # Limite pour éviter les tokens excessifs
         
         INSTRUCTIONS :
-        1. Évalue ce contenu selon les indicateurs listés
+        1. Évalue ce contenu selon les indicateurs listés{" et le contexte expert spécialisé" if self.current_subject else ""}
         2. Attribue une note de 0 à 5 (5 = excellent, 0 = absent/très insuffisant)
         3. Fournis un commentaire détaillé justifiant ta note
         4. Identifie des extraits du texte comme preuves (citations courtes)
         5. Liste les forces et faiblesses identifiées
-        6. Propose des recommandations d'amélioration
+        6. Propose des recommandations d'amélioration{f" adaptées à l'enseignement de {self.subject_experts['subjects'][self.current_subject]['name']}" if self.current_subject else ""}
         
         RÉPONSE ATTENDUE (FORMAT JSON) :
         {{
@@ -280,10 +330,10 @@ class PedagogicalAuditEngine:
         
         for attempt in range(max_retries):
             try:
-                response = self.client.chat.completions.create(
+                response = self.groq_client.chat.completions.create(
                     model="llama-3.3-70b-versatile",
                     messages=[
-                        {"role": "system", "content": "Tu es un expert en évaluation pédagogique. Réponds uniquement en JSON valide."},
+                        {"role": "system", "content": f"Tu es un expert en évaluation pédagogique{(' spécialisé en ' + self.subject_experts['subjects'][self.current_subject]['name']) if self.current_subject else ''}. Réponds uniquement en JSON valide."},
                         {"role": "user", "content": prompt}
                     ],
                     temperature=0.3,
