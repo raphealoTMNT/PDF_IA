@@ -1,0 +1,60 @@
+{
+  "filename": "module_Cahier de charges_pv_equivalence.pdf",
+  "extraction_date": "2025-09-25T14:13:45.869156",
+  "statistics": {
+    "word_count": 862,
+    "character_count": 5569,
+    "line_count": 106
+  },
+  "top_keywords": [
+    [
+      "pour",
+      13
+    ],
+    [
+      "excel",
+      11
+    ],
+    [
+      "équivalence",
+      10
+    ],
+    [
+      "polytech",
+      9
+    ],
+    [
+      "intl",
+      9
+    ],
+    [
+      "dans",
+      8
+    ],
+    [
+      "tableau",
+      8
+    ],
+    [
+      "acquis",
+      8
+    ],
+    [
+      "année",
+      8
+    ],
+    [
+      "relevé",
+      8
+    ]
+  ],
+  "extracted_data": {
+    "emails": [],
+    "urls": [],
+    "dates": []
+  },
+  "content_preview": "Projet : Automatisation du processus d’équivalence  \n1. Problématique  \nPolytech INTL reçoit des candidats ayant déjà suivi un cycle dans un autre établissement et souhaitant \npoursuivre leurs études dans un cycle équivalent à Polytech INTL.  \nLe processus d’équivalence actuel  est manuel et répétitif :  \n1. Vérification de la compatibilité des cycles et diplômes.  \n2. Comparaison des spécialités.  \n3. Génération de deux tableaux  : \no Tableau d’équivalence des acquis : correspondance entre modu...",
+  "full_content": "Projet : Automatisation du processus d’équivalence  \n1. Problématique  \nPolytech INTL reçoit des candidats ayant déjà suivi un cycle dans un autre établissement et souhaitant \npoursuivre leurs études dans un cycle équivalent à Polytech INTL.  \nLe processus d’équivalence actuel  est manuel et répétitif :  \n1. Vérification de la compatibilité des cycles et diplômes.  \n2. Comparaison des spécialités.  \n3. Génération de deux tableaux  : \no Tableau d’équivalence des acquis : correspondance entre modules acquis et modules \nde la même année à Polytech INTL.  \no Tableau d’équivalence des prérequis : correspondance entre modules acquis et \nmodules de la nouvelle année à Polytech INTL pour identifier les prérequis.  \n4. Calcul des scores d’équivalence  (pourcentage de crédits cumulés).  \n5. Validation et remise au candidat.  \nLes inputs  sont :  \n• Relevé de notes du candidat (PDF ou image).  \n• Plan d’étude Polytech INTL (Excel).  \nLes outputs  sont :  \n• Les deux tableaux d’équivalence avec crédits et scores.  \n• Possibilité d’export Excel.  \n2. Objectif du projet  \nAutomatiser entièrement ce processus en développant une application web  accessible pour le chef de \ndépartement et les candidats :  \n• Upload des documents (PDF/Image + Excel)  \n• Extraction et traitement automatique des informations  \n• Génération et affichage des tableaux d’équivalence avec crédits et scores  \n• Export Excel  \n• Déploiement simple et gratuit pour usage interne et tests  \n \n3. Choix technologique  \nPlusieurs solutions de développement d’interfaces web pour l’IA ont été  proposé es, notamment Gradio  \net Streamlit.  \nDans notre projet, le choix s era S treamlit  à la suite des critère s suivants : \no Simplicité d’implémentation  : permet de gérer à la fois le front -end et le back -end en Python, \nsans besoin de connaissances avancées en développement web.  \no Déploiement facile et gratuit  : compatible avec des plateformes de déploiement gratuites (ex. \nStreamlit Community Cloud, Hugging Face Spaces).  \no Écosystème adapté à la data science  : intégration simple avec des bibliothèques comme scikit -\nlearn, pandas, matplotlib, etc.  \no Courbe d’apprentissage réduite  : l’outil est intuitif et accessible rapidement aux étudiants.  \n \n4. Réalisation du projet  \n4.1. Composant upload et validation des fichiers  \nObjectif :  \nPermettre à l’utilisateur de charger :  \n• Le relevé de notes (format PDF ou image)  \n• Le plan d’étude  (format Excel)  \nValidation des fichiers = vérification que :  \n• Le format  est correct (PDF/Image pour relevé, Excel pour plan d’étude).  \n• La taille  ne dépasse pas la limite fixée (par ex. 10 Mo).  \n• Le fichier n’est pas corrompu  (Streamlit peut tester en tentant une lecture rapide).  \n• Le contenu est présent  (par ex. pour Excel : au moins un onglet, pour PDF : au moins une \npage).  \n4.2. Composant extraction OCR et parsing du relevé de notes \nObjectif :  \n• Utiliser un moteur OCR (ex. Tesseract ) pour lire le contenu texte du relevé scanné (PDF ou \nimage).  \n• Extraire les informations utiles : modules, crédits, notes, année d’étude, spécialité.  \nInteraction utilisateur :  \n• Une fois le relevé analysé, l’application affiche le texte digitalisé  dans un tableau ou un bloc \nde texte.  \n• L’utilisateur vérifie visuellement  que la reconnaissance est correcte.  \n• En cas d’erreur, il peut recharger un autre fichier ou corriger manuellement.  \n4.3. Composant extraction et lecture du plan d’étude  \nObjectif :  \n• Lire le fichier Excel contenant le plan d’étude complet.  \n• Extraire uniquement les années pertinentes : \no L’année équivalente à celle réussie par le candidat  \no L’année que le candidat souhaite rejoindre  \n• Identifier le cycle  (Licence, Master, Ingénieur) et spécialité . \nRôle clé :  \n• Vérifier la compatibilité  du cycle entre l’ancien parcours et celui de Polytech INTL.  \n• Alerter si le cycle est différent ou incompatible.  \n4.4. Composant matching modules et génération des tableaux  \nObjectif :  \n• Processus 1  → Génération du Tableau d’équivalence des acquis : \no Pour chaque module de l’année équivalente de Polytech INTL → chercher le module \ncorrespondant dans le relevé du candidat (matching par nom et/ou mots -clés).  \n• Processus 2  → Génération du Tableau d’équivalence des prérequis : \no Pour chaque module de la nouvelle année à Polytech INTL → identifier dans le relevé du candidat les modules prérequis.  \nSortie :  \n• Deux tableaux distincts affichés dans Streamlit.  \n• Chaque ligne comporte : Nom module, Crédit, Module correspondant, Crédit acquis.  \n4.5. Composant calcul des scores  \nObjectif :  \n• Pour chaque tableau généré :  \no Sommer les crédits acquis par le candidat  \no Diviser par le total des crédits de l’année correspondante à Polytech INTL  \no Afficher le résultat sous forme de pourcentage d’équivalence  (ex. 75%).  \n4.6. Composant affichage et export Excel  \nObjectif :  \n• Afficher les deux tableaux et les scores de façon claire et lisible.  \n• Bouton \"Exporter en Excel\"  → créer un fichier Excel pré -formaté avec :  \no Tableau des acquis  \no Tableau des prérequis  \no Scores calculés  \n\r����� Format de sortie  : \nFeuille 1 = Acquis  \nFeuille 2 = Prérequis \nFeuille 3 = Récap scores  \n5. Déploiement  \n- Héberger gratuitement le projet en ligne.  \n- Utiliser une plateforme de déploiement supportant Streamlit  (par ex. Streamlit Community Cloud , \nHugging Face Spaces, ou autre équivalent).  \n- Fournir le code source dans un dépôt public ( GitHub ). \n- Connecter le dépôt à la plateforme choisie pour activer le déploiement automatique.",
+  "file_type": "document",
+  "original_path": "data/uploads\\module_Cahier de charges_pv_equivalence.pdf"
+}

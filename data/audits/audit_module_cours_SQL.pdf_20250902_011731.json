@@ -1,0 +1,860 @@
+{
+  "metadata": {
+    "filename": "module_cours SQL.pdf",
+    "audit_type": "hybrid",
+    "audit_date": "2025-09-02T01:17:31.174940",
+    "grille_version": "1.0",
+    "total_pages": 1,
+    "word_count": 4877,
+    "chapters_count": 1
+  },
+  "scores": {
+    "final_score": 30.96,
+    "grade": "E",
+    "grade_description": "Très insuffisant - Contenu pédagogique nécessitant une refonte complète",
+    "standard_score": 51.6,
+    "chapter_score": 0.0
+  },
+  "analysis": {
+    "standard_analysis": {
+      "mandatory_sections": {
+        "found_sections": [
+          "introduction",
+          "objectifs",
+          "contenu principal",
+          "conclusion"
+        ],
+        "missing_sections": [],
+        "completion_rate": 100.0
+      },
+      "elements_count": {
+        "examples_count": 5,
+        "exercises_count": 5
+      },
+      "global_recommendations": {
+        "forces": [
+          "Couverture de divers aspects des contraintes d'intégrité",
+          "Exemples de code SQL pour soutenir les concepts théoriques",
+          "Exemples de code SQL pour illustrer les concepts",
+          "Exemples et explications détaillées",
+          "Le contenu est riche en informations sur les contraintes d'intégrité en base de données"
+        ],
+        "faiblesses": [
+          "Manque de transitions entre les paragraphes pour une meilleure fluidité",
+          "Certaines parties du contenu pourraient être réorganisées pour améliorer la lisibilité",
+          "Manque de questions de réflexion, de travaux dirigés ou de projets",
+          "Manque de synthèse ou de conclusion",
+          "Certains termes techniques pourraient être expliqués de manière plus détaillée"
+        ],
+        "recommandations_prioritaires": [
+          "Amélioration de la structure générale",
+          "Ajout d'exemples et d'exercices",
+          "Clarification des objectifs"
+        ],
+        "recommandations_detaillees": [
+          "Ajouter des activités pratiques, comme la conception et la réalisation d'un projet de base de données qui implique la mise en œuvre de ces contraintes",
+          "Intégrer des questions de révision ou des exercices pratiques pour évaluer la compréhension des étudiants",
+          "Organiser le contenu de manière plus pédagogique, avec des titres, des sous-titres et des résumés pour faciliter la compréhension",
+          "Réorganiser certaines parties du contenu pour améliorer la lisibilité et la compréhension",
+          "Ajouter une introduction qui présente le contexte et l'importance des contraintes d'intégrité",
+          "Ajouter des transitions entre les paragraphes pour faciliter la compréhension",
+          "Ajouter une introduction claire qui présente les objectifs pédagogiques, les compétences visées et le public cible",
+          "Mentionner explicitement les prérequis pour que les apprenants puissent évaluer leur niveau de préparation",
+          "Ajouter des exemples concrets et des études de cas qui montrent l'application des concepts dans des scénarios réels",
+          "Améliorer la hiérarchisation des informations pour rendre le contenu plus clair et plus facile à suivre"
+        ]
+      }
+    },
+    "chapter_analysis": {
+      "chapters": [
+        {
+          "objectifs": {
+            "present": false,
+            "clairs": false,
+            "score": 0,
+            "commentaire": "Le chapitre ne définit pas clairement ses objectifs d'apprentissage. Il semble être une présentation de concepts sans introduction ou conclusion claire."
+          },
+          "competences": {
+            "definies": false,
+            "explicites": false,
+            "score": 0,
+            "commentaire": "Les compétences à acquérir ne sont pas explicitement définies dans le chapitre. Les étudiants pourraient avoir du mal à comprendre ce qu'ils sont censés apprendre."
+          },
+          "contenu": {
+            "structure": true,
+            "progression": true,
+            "adapte": false,
+            "score": 3,
+            "commentaire": "Le contenu est structuré et progressif, mais il semble être très dense et technique. Il pourrait être difficile pour les étudiants de suivre sans une introduction ou des explications plus détaillées."
+          },
+          "references": {
+            "presentes": false,
+            "pertinentes": false,
+            "score": 0,
+            "commentaire": "Il n'y a pas de références bibliographiques ou de ressources fournies dans le chapitre. Cela pourrait limiter la capacité des étudiants à approfondir leurs connaissances."
+          },
+          "volume": {
+            "approprie": false,
+            "equilibre_cours_td_tp": false,
+            "score": 2,
+            "commentaire": "Le volume de contenu semble être important, mais il n'est pas clair si cela est approprié pour un cours, un TD ou un TP. Il pourrait être difficile pour les étudiants de traiter toute l'information en une seule séance."
+          },
+          "score_global": 1,
+          "conformite": "non_conforme",
+          "recommandations": [
+            "Définir clairement les objectifs d'apprentissage et les compétences à acquérir",
+            "Fournir des introductions et des conclusions claires pour chaque section",
+            "Inclure des références bibliographiques ou des ressources pour approfondir les connaissances",
+            "Réviser le contenu pour le rendre plus accessible et progressif",
+            "Équilibrer le volume de contenu avec des activités de cours, TD et TP"
+          ],
+          "chapter_info": {
+            "title": "Document complet",
+            "word_count": 4877,
+            "chapter_number": 1
+          }
+        }
+      ],
+      "conformity_summary": {
+        "conforming_chapters": 0,
+        "total_chapters": 1,
+        "conformity_rate": 0.0
+      },
+      "criteria_averages": {
+        "objectifs": 0.0,
+        "competences": 0.0,
+        "contenu": 3.0,
+        "references": 0.0,
+        "volume": 2.0
+      }
+    }
+  },
+  "synthesis": {
+    "strengths": [
+      "Critère 'structure_progression' bien maîtrisé (score standard: 4.0/5)",
+      "Critère 'clarte_langage' bien maîtrisé (score standard: 4.0/5)",
+      "Critère 'exemples_concrets' bien maîtrisé (score standard: 4.0/5)"
+    ],
+    "weaknesses": [
+      "Critère 'introduction_objectifs' insuffisant (score standard: 2.0/5)",
+      "Critère 'exercices_activites' insuffisant (score standard: 2.0/5)",
+      "Critère 'methodes_evaluation' insuffisant (score standard: 0/5)",
+      "Critère 'resume_conclusion' insuffisant (score standard: 2.0/5)",
+      "Critère 'references_ressources' insuffisant (score standard: 2.0/5)"
+    ],
+    "recommendations": [
+      {
+        "priority": "high",
+        "category": "global",
+        "message": "Refonte complète du contenu pédagogique nécessaire"
+      },
+      {
+        "priority": "high",
+        "category": "chapter",
+        "message": "Améliorer le critère 'objectifs' dans tous les chapitres"
+      },
+      {
+        "priority": "high",
+        "category": "chapter",
+        "message": "Améliorer le critère 'competences' dans tous les chapitres"
+      },
+      {
+        "priority": "high",
+        "category": "chapter",
+        "message": "Améliorer le critère 'references' dans tous les chapitres"
+      }
+    ],
+    "overall_conformity": "non_conforme",
+    "improvement_priority": [
+      "Priorité 1: Améliorer 'methodes_evaluation' (analyse globale)",
+      "Priorité 2: Harmoniser 'objectifs' entre les chapitres"
+    ]
+  },
+  "raw_data": {
+    "standard_audit": {
+      "metadata": {
+        "filename": "module_cours SQL.pdf",
+        "audit_date": "2025-09-02T01:15:56.946570",
+        "grille_version": "1.0",
+        "total_pages": 1,
+        "word_count": 4877
+      },
+      "scores": {
+        "final_score": 51.6,
+        "grade": "D",
+        "grade_description": "Insuffisant - Contenu pédagogique nécessitant des améliorations importantes",
+        "criteria_scores": {
+          "introduction_objectifs": {
+            "score": 2.0,
+            "commentaire": "Le contenu présenté est très technique et semble être un extrait de cours ou de documentation sur les contraintes d'intégrité dans les bases de données. Il manque une introduction claire qui présente les objectifs pédagogiques, les compétences visées et le public cible. Les prérequis ne sont pas mentionnés explicitement. Cependant, le contenu est riche en informations et fournit de nombreux exemples concrets sur les différents types de contraintes d'intégrité, ce qui pourrait être utile pour les apprenants qui cherchent à comprendre ces concepts.",
+            "preuves": [
+              "Contrainte d’intégrité statique",
+              "CREATE TABLE emp(...",
+              "CHECK (age > 18 and  sal> 0)"
+            ],
+            "forces": [
+              "Contenu riche en informations techniques",
+              "Exemples concrets pour illustrer les concepts"
+            ],
+            "faiblesses": [
+              "Manque d'introduction claire et d'objectifs pédagogiques",
+              "Pas de mention explicite des compétences visées et du public cible",
+              "Pas de prérequis mentionnés"
+            ],
+            "recommandations": [
+              "Ajouter une introduction claire qui présente les objectifs pédagogiques, les compétences visées et le public cible",
+              "Mentionner explicitement les prérequis pour que les apprenants puissent évaluer leur niveau de préparation",
+              "Organiser le contenu de manière plus pédagogique, avec des titres, des sous-titres et des résumés pour faciliter la compréhension"
+            ]
+          },
+          "structure_progression": {
+            "score": 4.0,
+            "commentaire": "Le contenu présente une structure logique et une progression pédagogique claire, avec des sections bien définies et des transitions entre elles. Les concepts sont présentés de manière progressive, avec des exemples et des explications détaillées. Cependant, le plan structuré et visible n'est pas explicitement présenté, et la hiérarchisation des informations pourrait être améliorée. La cohérence globale est bonne, mais certaines parties du contenu pourraient être réorganisées pour améliorer la lisibilité.",
+            "preuves": [
+              "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+              "CREATE TABLE Commande  (noCommande  INTEGER   NOT NULL,  dateCommande  DATE   NOT NULL,  noClient   INTEGER  NOT NULL,  PRIMARY KEY (noCommande),  FOREIGN KEY (noClient) REFERENCES Client(noClient)  )",
+              "CHECK (age > 18 and  sal> 0) ?"
+            ],
+            "forces": [
+              "Présentation claire et progressive des concepts",
+              "Exemples et explications détaillées",
+              "Utilisation de mots-clés pertinents (plan, sommaire, chapitre, section, partie, étape)"
+            ],
+            "faiblesses": [
+              "Manque de plan structuré et visible",
+              "Hiérarchisation des informations pourrait être améliorée",
+              "Certaines parties du contenu pourraient être réorganisées pour améliorer la lisibilité"
+            ],
+            "recommandations": [
+              "Ajouter un plan structuré et visible pour aider les lecteurs à naviguer dans le contenu",
+              "Améliorer la hiérarchisation des informations pour rendre le contenu plus clair et plus facile à suivre",
+              "Réorganiser certaines parties du contenu pour améliorer la lisibilité et la compréhension"
+            ]
+          },
+          "clarte_langage": {
+            "score": 4.0,
+            "commentaire": "Le contenu éducatif présente une structure claire et bien organisée, avec des titres et des sous-titres qui facilitent la compréhension. Le vocabulaire utilisé est adapté au niveau des étudiants en informatique, avec des termes techniques définis et expliqués de manière concise. Les phrases sont généralement claires et concises, mais certaines parties du texte pourraient être améliorées pour une meilleure fluidité. Le style pédagogique est approprié, avec des exemples et des illustrations qui aident à comprendre les concepts. Cependant, certaines parties du texte pourraient être considérées comme un peu denses et nécessiteraient une reformulation pour une meilleure accessibilité.",
+            "preuves": [
+              "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+              "CREATE TABLE Commande (noCommande INTEGER NOT NULL, dateCommande DATE NOT NULL, noClient INTEGER NOT NULL, PRIMARY KEY (noCommande), FOREIGN KEY (noClient) REFERENCES Client(noClient))",
+              "CHECK (age > 18 and sal > 0)"
+            ],
+            "forces": [
+              "Structure claire et bien organisée",
+              "Vocabulaire adapté au niveau des étudiants",
+              "Exemples et illustrations pour faciliter la compréhension",
+              "Style pédagogique approprié"
+            ],
+            "faiblesses": [
+              "Certaines parties du texte sont un peu denses et nécessiteraient une reformulation",
+              "Manque de transitions entre les paragraphes pour une meilleure fluidité",
+              "Certains termes techniques pourraient être expliqués de manière plus détaillée"
+            ],
+            "recommandations": [
+              "Réorganiser certaines parties du texte pour une meilleure fluidité et une meilleure accessibilité",
+              "Ajouter des transitions entre les paragraphes pour faciliter la compréhension",
+              "Fournir des explications plus détaillées pour les termes techniques complexes",
+              "Utiliser des exemples et des illustrations supplémentaires pour faciliter la compréhension"
+            ]
+          },
+          "exemples_concrets": {
+            "score": 4.0,
+            "commentaire": "Le contenu présente une grande variété d'exemples concrets et d'illustrations concrètes liées aux contraintes d'intégrité en base de données, ce qui facilite la compréhension des concepts. Les exemples de code SQL sont nombreux et bien choisis, permettant aux lecteurs de visualiser les concepts théoriques. Cependant, il manque des liens plus explicites avec la réalité professionnelle et des cas d'usage pratiques pour certains concepts, comme les déclencheurs (TRIGGER). De plus, certaines parties du texte pourraient bénéficier d'une mise en forme plus pédagogique pour améliorer la lisibilité et la compréhension.",
+            "preuves": [
+              "CREATE TABLE Commande  (noCommande  INTEGER   NOT NULL,  dateCommande  DATE   NOT NULL,  noClient   INTEGER  NOT NULL,  PRIMARY KEY (noCommande),  FOREIGN KEY (noClient) REFERENCES Client(noClient)  )",
+              "CHECK (age > 18 and  sal> 0) ?",
+              "CONSTRAINT contNoClient CHECK(IdClient > 0 AND IdClient < 100000)"
+            ],
+            "forces": [
+              "Variété d'exemples concrets et d'illustrations",
+              "Exemples de code SQL pour soutenir les concepts théoriques",
+              "Présence de concepts clés tels que les contraintes d'intégrité et les déclencheurs"
+            ],
+            "faiblesses": [
+              "Manque de liens avec la réalité professionnelle pour certains concepts",
+              "Pas de cas d'usage pratiques pour certains sujets comme les déclencheurs",
+              "Mise en forme du texte qui pourrait être améliorée pour une meilleure lisibilité"
+            ],
+            "recommandations": [
+              "Ajouter des exemples concrets et des études de cas qui montrent l'application des concepts dans des scénarios réels",
+              "Inclure des exercices pratiques ou des projets pour que les lecteurs puissent appliquer leurs connaissances",
+              "Améliorer la mise en forme du texte avec des titres, des sous-titres, des listes et des images pour faciliter la navigation et la compréhension"
+            ]
+          },
+          "exercices_activites": {
+            "score": 2.0,
+            "commentaire": "Le contenu fourni est principalement théorique et concerne les contraintes d'intégrité dans les bases de données, notamment avec SQL. Il aborde différents types de contraintes comme les clés primaires, uniques, les contraintes de référence et les déclencheurs. Cependant, il manque complètement d'exercices d'application, d'activités pratiques, de questions de réflexion, de travaux dirigés ou de projets qui pourraient aider les apprenants à mettre en pratique leurs connaissances. Les seules 'activités' présentes sont des exemples de code SQL qui illustrent les concepts théoriques, mais ne constituent pas à proprement parler des exercices ou des activités pédagogiques.",
+            "preuves": [
+              "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+              "CREATE TABLE emp(... idDept INTEGER, FOREIGN KEY ( idDept) REFERENCES Dept(idDept), ...)"
+            ],
+            "forces": [
+              "Présence de concepts théoriques détaillés sur les contraintes d'intégrité",
+              "Exemples de code SQL pour illustrer les concepts"
+            ],
+            "faiblesses": [
+              "Absence d'exercices d'application et d'activités pratiques",
+              "Manque de questions de réflexion, de travaux dirigés ou de projets"
+            ],
+            "recommandations": [
+              "Intégrer des exercices d'application qui nécessitent la mise en pratique des connaissances sur les contraintes d'intégrité",
+              "Ajouter des activités pratiques, comme la conception et la réalisation d'un projet de base de données qui implique la mise en œuvre de ces contraintes",
+              "Inclure des questions de réflexion pour encourager la pensée critique sur les applications et les limites des contraintes d'intégrité"
+            ]
+          },
+          "methodes_evaluation": {
+            "score": 0,
+            "commentaire": "Le contenu fourni ne répond pas aux indicateurs d'évaluation des apprentissages. Il s'agit d'un contenu informatif sur les contraintes d'intégrité en base de données, mais il ne comporte aucune modalité d'évaluation, grille de correction, auto-évaluation ou feedback constructif. Les mots-clés à rechercher tels que 'évaluation', 'test', 'contrôle', 'examen', 'note', 'correction' ne sont pas présents dans le contenu.",
+            "preuves": [
+              "Aucune mention d'évaluation ou de modalités d'évaluation",
+              "Le contenu se concentre uniquement sur les concepts de base de données"
+            ],
+            "forces": [
+              "Le contenu est riche en informations sur les contraintes d'intégrité en base de données",
+              "Il couvre différents aspects tels que les contraintes d'intégrité statique et dynamique"
+            ],
+            "faiblesses": [
+              "Absence totale de modalités d'évaluation",
+              "Pas de grille de correction ou d'auto-évaluation proposée"
+            ],
+            "recommandations": [
+              "Intégrer des questions de révision ou des exercices pratiques pour évaluer la compréhension des étudiants",
+              "Proposer des activités d'auto-évaluation pour encourager les étudiants à réfléchir sur leur apprentissage"
+            ]
+          },
+          "resume_conclusion": {
+            "score": 2.0,
+            "commentaire": "Le contenu présenté est une liste de concepts et de définitions liés aux contraintes d'intégrité dans les bases de données, notamment les contraintes statiques et dynamiques, les clés primaires et étrangères, les déclencheurs, etc. Cependant, il manque une synthèse ou une conclusion qui résume les points clés et qui ouvre vers la suite. Les concepts sont présentés de manière isolée sans lien entre eux, ce qui rend difficile la compréhension globale du sujet. De plus, il n'y a pas de récapitulatif des apprentissages ou de consolidation des acquis.",
+            "preuves": [
+              "Contrainte d’intégrité statique",
+              "PRIMARY KEY, UNIQUE, NOT NULL, DOMAIN, FOREIGN KEY, CHECK, ASSERTION",
+              "TRIGGER (SQL :1999 )‏"
+            ],
+            "forces": [
+              "Présence de définitions et de concepts clés liés aux contraintes d'intégrité",
+              "Utilisation de termes techniques appropriés"
+            ],
+            "faiblesses": [
+              "Manque de synthèse ou de conclusion",
+              "Présentation isolée des concepts sans lien entre eux",
+              "Absence de récapitulatif des apprentissages ou de consolidation des acquis"
+            ],
+            "recommandations": [
+              "Ajouter une introduction qui présente le contexte et l'importance des contraintes d'intégrité",
+              "Créer des liens entre les concepts pour faciliter la compréhension globale",
+              "Inclure des exemples concrets pour illustrer l'application des contraintes d'intégrité",
+              "Ajouter une conclusion qui résume les points clés et ouvre vers la suite"
+            ]
+          },
+          "references_ressources": {
+            "score": 2.0,
+            "commentaire": "Le contenu éducatif présenté semble être un cours ou une présentation sur les contraintes d'intégrité dans les bases de données, notamment dans le contexte de SQL. Il couvre divers aspects tels que les contraintes d'intégrité statique et dynamique, les clés primaires, les clés étrangères, les contraintes CHECK, etc. Cependant, lors de l'évaluation selon le critère 'Références & Ressources', il est évident que le contenu manque de références et de ressources complémentaires. Il n'y a pas de bibliographie présente, les sources ne sont pas clairement identifiées, et il n'y a pas de liens externes ou de documentation technique fournis pour approfondir les connaissances. Les seules 'preuves' de qualité pédagogique sont les exemples SQL et les explications des concepts, mais sans références pour étayer ces informations.",
+            "preuves": [
+              "CREATE TABLE emp(...",
+              "FOREIGN KEY (idDept) REFERENCES Dept(idDept)"
+            ],
+            "forces": [
+              "Exemples SQL détaillés pour illustrer les concepts",
+              "Couverture de divers aspects des contraintes d'intégrité"
+            ],
+            "faiblesses": [
+              "Absence de bibliographie et de sources fiables",
+              "Manque de liens externes et de documentation technique"
+            ],
+            "recommandations": [
+              "Inclure une bibliographie avec des sources fiables et récentes",
+              "Fournir des liens externes vers des ressources complémentaires et des documentations techniques",
+              "Ajouter des références pour étayer les informations présentées"
+            ]
+          }
+        }
+      },
+      "analysis": {
+        "mandatory_sections": {
+          "found_sections": [
+            "introduction",
+            "objectifs",
+            "contenu principal",
+            "conclusion"
+          ],
+          "missing_sections": [],
+          "completion_rate": 100.0
+        },
+        "elements_count": {
+          "examples_count": 5,
+          "exercises_count": 5
+        },
+        "global_recommendations": {
+          "forces": [
+            "Couverture de divers aspects des contraintes d'intégrité",
+            "Exemples de code SQL pour soutenir les concepts théoriques",
+            "Exemples de code SQL pour illustrer les concepts",
+            "Exemples et explications détaillées",
+            "Le contenu est riche en informations sur les contraintes d'intégrité en base de données"
+          ],
+          "faiblesses": [
+            "Manque de transitions entre les paragraphes pour une meilleure fluidité",
+            "Certaines parties du contenu pourraient être réorganisées pour améliorer la lisibilité",
+            "Manque de questions de réflexion, de travaux dirigés ou de projets",
+            "Manque de synthèse ou de conclusion",
+            "Certains termes techniques pourraient être expliqués de manière plus détaillée"
+          ],
+          "recommandations_prioritaires": [
+            "Amélioration de la structure générale",
+            "Ajout d'exemples et d'exercices",
+            "Clarification des objectifs"
+          ],
+          "recommandations_detaillees": [
+            "Ajouter des activités pratiques, comme la conception et la réalisation d'un projet de base de données qui implique la mise en œuvre de ces contraintes",
+            "Intégrer des questions de révision ou des exercices pratiques pour évaluer la compréhension des étudiants",
+            "Organiser le contenu de manière plus pédagogique, avec des titres, des sous-titres et des résumés pour faciliter la compréhension",
+            "Réorganiser certaines parties du contenu pour améliorer la lisibilité et la compréhension",
+            "Ajouter une introduction qui présente le contexte et l'importance des contraintes d'intégrité",
+            "Ajouter des transitions entre les paragraphes pour faciliter la compréhension",
+            "Ajouter une introduction claire qui présente les objectifs pédagogiques, les compétences visées et le public cible",
+            "Mentionner explicitement les prérequis pour que les apprenants puissent évaluer leur niveau de préparation",
+            "Ajouter des exemples concrets et des études de cas qui montrent l'application des concepts dans des scénarios réels",
+            "Améliorer la hiérarchisation des informations pour rendre le contenu plus clair et plus facile à suivre"
+          ]
+        }
+      },
+      "raw_data": {
+        "extracted_text_preview": "08/12/2009\n1\nContrainte d’intégrité\nContrainte d'intégrité statique\n–respectée pour chacun desétats delaBD\n–mécanisme déclaratif\nPRIMARY KEY, UNIQUE, NOT NULL, DOMAIN, FOREIGN KEY, CHECK,\nASSERTION\n–procédural\nTRIGGER (SQL :1999 )‏\nContrainte d'intégrité dynamique\n–contrainte surchangements d'états (unchangement ->unchangement ->etc..)‏\n–référence auxétats successifs delabase\n–TRIGGER\nContrainte colonne\nTypes SQL\nINTEGER\nCHAR\n...\nNOT NULL\nCHECK\nCREATE DOMAIN ( SQL, pas disponible pour Ora...",
+        "pdf_statistics": {
+          "page_count": 1,
+          "word_count": 4877
+        }
+      }
+    },
+    "chapter_audit": {
+      "metadata": {
+        "filename": "module_cours SQL.pdf",
+        "audit_type": "chapter_by_chapter",
+        "audit_date": "2025-09-02T01:17:31.173923",
+        "grille_version": "1.0",
+        "total_pages": 1,
+        "word_count": 4877,
+        "chapters_count": 1
+      },
+      "scores": {
+        "final_score": 0.0,
+        "grade": "E",
+        "grade_description": "Très insuffisant - Contenu pédagogique nécessitant une refonte complète"
+      },
+      "chapters": [
+        {
+          "objectifs": {
+            "present": false,
+            "clairs": false,
+            "score": 0,
+            "commentaire": "Le chapitre ne définit pas clairement ses objectifs d'apprentissage. Il semble être une présentation de concepts sans introduction ou conclusion claire."
+          },
+          "competences": {
+            "definies": false,
+            "explicites": false,
+            "score": 0,
+            "commentaire": "Les compétences à acquérir ne sont pas explicitement définies dans le chapitre. Les étudiants pourraient avoir du mal à comprendre ce qu'ils sont censés apprendre."
+          },
+          "contenu": {
+            "structure": true,
+            "progression": true,
+            "adapte": false,
+            "score": 3,
+            "commentaire": "Le contenu est structuré et progressif, mais il semble être très dense et technique. Il pourrait être difficile pour les étudiants de suivre sans une introduction ou des explications plus détaillées."
+          },
+          "references": {
+            "presentes": false,
+            "pertinentes": false,
+            "score": 0,
+            "commentaire": "Il n'y a pas de références bibliographiques ou de ressources fournies dans le chapitre. Cela pourrait limiter la capacité des étudiants à approfondir leurs connaissances."
+          },
+          "volume": {
+            "approprie": false,
+            "equilibre_cours_td_tp": false,
+            "score": 2,
+            "commentaire": "Le volume de contenu semble être important, mais il n'est pas clair si cela est approprié pour un cours, un TD ou un TP. Il pourrait être difficile pour les étudiants de traiter toute l'information en une seule séance."
+          },
+          "score_global": 1,
+          "conformite": "non_conforme",
+          "recommandations": [
+            "Définir clairement les objectifs d'apprentissage et les compétences à acquérir",
+            "Fournir des introductions et des conclusions claires pour chaque section",
+            "Inclure des références bibliographiques ou des ressources pour approfondir les connaissances",
+            "Réviser le contenu pour le rendre plus accessible et progressif",
+            "Équilibrer le volume de contenu avec des activités de cours, TD et TP"
+          ],
+          "chapter_info": {
+            "title": "Document complet",
+            "word_count": 4877,
+            "chapter_number": 1
+          }
+        }
+      ],
+      "chapter_analysis": {
+        "chapters": [
+          {
+            "objectifs": {
+              "present": false,
+              "clairs": false,
+              "score": 0,
+              "commentaire": "Le chapitre ne définit pas clairement ses objectifs d'apprentissage. Il semble être une présentation de concepts sans introduction ou conclusion claire."
+            },
+            "competences": {
+              "definies": false,
+              "explicites": false,
+              "score": 0,
+              "commentaire": "Les compétences à acquérir ne sont pas explicitement définies dans le chapitre. Les étudiants pourraient avoir du mal à comprendre ce qu'ils sont censés apprendre."
+            },
+            "contenu": {
+              "structure": true,
+              "progression": true,
+              "adapte": false,
+              "score": 3,
+              "commentaire": "Le contenu est structuré et progressif, mais il semble être très dense et technique. Il pourrait être difficile pour les étudiants de suivre sans une introduction ou des explications plus détaillées."
+            },
+            "references": {
+              "presentes": false,
+              "pertinentes": false,
+              "score": 0,
+              "commentaire": "Il n'y a pas de références bibliographiques ou de ressources fournies dans le chapitre. Cela pourrait limiter la capacité des étudiants à approfondir leurs connaissances."
+            },
+            "volume": {
+              "approprie": false,
+              "equilibre_cours_td_tp": false,
+              "score": 2,
+              "commentaire": "Le volume de contenu semble être important, mais il n'est pas clair si cela est approprié pour un cours, un TD ou un TP. Il pourrait être difficile pour les étudiants de traiter toute l'information en une seule séance."
+            },
+            "score_global": 1,
+            "conformite": "non_conforme",
+            "recommandations": [
+              "Définir clairement les objectifs d'apprentissage et les compétences à acquérir",
+              "Fournir des introductions et des conclusions claires pour chaque section",
+              "Inclure des références bibliographiques ou des ressources pour approfondir les connaissances",
+              "Réviser le contenu pour le rendre plus accessible et progressif",
+              "Équilibrer le volume de contenu avec des activités de cours, TD et TP"
+            ],
+            "chapter_info": {
+              "title": "Document complet",
+              "word_count": 4877,
+              "chapter_number": 1
+            }
+          }
+        ],
+        "conformity_summary": {
+          "conforme": 0,
+          "partiellement_conforme": 0,
+          "non_conforme": 1
+        },
+        "criteria_averages": {
+          "objectifs": 0.0,
+          "competences": 0.0,
+          "contenu": 3.0,
+          "references": 0.0,
+          "volume": 2.0
+        },
+        "conformity_rate": 0.0
+      },
+      "global_analysis": {
+        "metadata": {
+          "filename": "module_cours SQL.pdf",
+          "audit_date": "2025-09-02T01:17:31.172997",
+          "grille_version": "1.0",
+          "total_pages": 1,
+          "word_count": 4877
+        },
+        "scores": {
+          "final_score": 48.6,
+          "grade": "D",
+          "grade_description": "Insuffisant - Contenu pédagogique nécessitant des améliorations importantes",
+          "criteria_scores": {
+            "introduction_objectifs": {
+              "score": 2.0,
+              "commentaire": "Le contenu présenté est très technique et semble être un extrait d'un cours ou d'un manuel sur les bases de données, plus précisément sur les contraintes d'intégrité. Il y a une absence totale d'introduction, d'objectifs pédagogiques clairs, de compétences visées, de public cible identifié et de prérequis mentionnés. Le contenu se lance directement dans des explications détaillées sur les contraintes d'intégrité statique et dynamique, les clés primaires, les clés étrangères, les déclencheurs, etc., sans fournir de contexte ou de justification pédagogique. Les seules indications de structure sont les titres et les numéros de page, qui suggèrent un format de diapositives ou de notes de cours.",
+              "preuves": [
+                "Contrainte d’intégrité statique",
+                "PRIMARY KEY, UNIQUE, NOT NULL, DOMAIN, FOREIGN KEY, CHECK, ASSERTION",
+                "CREATE TABLE emp(...",
+                "FOREIGN KEY (idDept) REFERENCES Dept(idDept)"
+              ],
+              "forces": [
+                "Présence de nombreux exemples concrets pour illustrer les concepts",
+                "Utilisation de syntaxe SQL pour expliquer les notions de contraintes d'intégrité"
+              ],
+              "faiblesses": [
+                "Absence d'introduction et d'objectifs pédagogiques clairs",
+                "Manque de contexte et de justification pédagogique pour les concepts présentés",
+                "Pas de compétences visées ou de public cible identifié",
+                "Pas de prérequis mentionnés pour la compréhension du contenu"
+              ],
+              "recommandations": [
+                "Ajouter une introduction claire qui présente les objectifs pédagogiques et le contexte du cours",
+                "Identifier explicitement le public cible et les compétences visées",
+                "Mentionner les prérequis nécessaires pour comprendre le contenu",
+                "Incorporer des exemples pédagogiques et des exercices pour renforcer la compréhension"
+              ]
+            },
+            "structure_progression": {
+              "score": 3.0,
+              "commentaire": "Le contenu présente une structure globale logique, avec des sections bien définies sur les contraintes d'intégrité, les clés primaires, les clés étrangères, les déclencheurs, etc. Cependant, la progression logique des concepts pourrait être améliorée, car certaines transitions entre les sections semblent abruptes. De plus, la hiérarchisation des informations n'est pas toujours claire, avec des sous-sections qui pourraient être regroupées de manière plus logique. La cohérence globale est présente, mais certaines parties du contenu semblent un peu désorganisées.",
+              "preuves": [
+                "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+                "CREATE TABLE Commande  (noCommande  INTEGER   NOT NULL,  dateCommande  DATE   NOT NULL,  noClient   INTEGER  NOT NULL,  PRIMARY KEY (noCommande),  FOREIGN KEY (noClient) REFERENCES Client(noClient)  )",
+                "CHECK (age > 18 and  sal> 0) ?"
+              ],
+              "forces": [
+                "Présence d'exemples concrets pour illustrer les concepts",
+                "Utilisation de syntaxe SQL pour démontrer les contraintes et les déclencheurs",
+                "Couverture de différents types de contraintes d'intégrité"
+              ],
+              "faiblesses": [
+                "Manque de plan structuré visible au début du contenu",
+                "Transitions abruptes entre certaines sections",
+                "Pas d'introduction claire sur l'importance des contraintes d'intégrité dans les bases de données"
+              ],
+              "recommandations": [
+                "Ajouter un plan ou un sommaire au début du contenu pour aider les lecteurs à naviguer",
+                "Améliorer les transitions entre les sections pour rendre la lecture plus fluide",
+                "Inclure des exemples plus variés pour illustrer les différents types de contraintes et déclencheurs",
+                "Fournir une introduction plus détaillée sur le contexte et l'importance des contraintes d'intégrité dans la conception de bases de données"
+              ]
+            },
+            "clarte_langage": {
+              "score": 4.0,
+              "commentaire": "Le contenu éducatif présente une structure claire et cohérente, avec des définitions précises des termes techniques tels que 'Contrainte d'intégrité' et 'Déclencheur (TRIGGER)'. Les exemples fournis, comme 'CHECK (age > 18 and sal > 0)' et 'CREATE TABLE Commande', illustrent de manière efficace les concepts abordés. Cependant, certaines parties du texte pourraient bénéficier d'une reformulation pour améliorer la fluidité et la clarté, notamment les sections très denses en informations techniques. De plus, l'utilisation de termes spécifiques à certaines bases de données (comme Oracle) pourrait être explicitée pour éviter les confusions.",
+              "preuves": [
+                "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+                "CHECK (age > 18 and sal > 0)",
+                "CREATE TABLE Commande"
+              ],
+              "forces": [
+                "Structure claire et cohérente",
+                "Définitions précises des termes techniques",
+                "Exemples pertinents pour illustrer les concepts"
+              ],
+              "faiblesses": [
+                "Certaines parties du texte sont denses en informations techniques et pourraient être reformulées pour améliorer la clarté",
+                "Utilisation de termes spécifiques à certaines bases de données sans explication",
+                "Pas d'introduction ou de conclusion pour encadrer le contenu"
+              ],
+              "recommandations": [
+                "Réorganiser certaines sections pour améliorer la fluidité du texte",
+                "Fournir des explications supplémentaires pour les termes spécifiques à certaines bases de données",
+                "Ajouter une introduction et une conclusion pour donner un contexte clair au contenu"
+              ]
+            },
+            "exemples_concrets": {
+              "score": 4.0,
+              "commentaire": "Le contenu présente une grande variété d'exemples concrets et d'illustrations concrètes liées aux contraintes d'intégrité en base de données, notamment avec des exemples de code SQL. Cependant, il manque parfois de liens explicites avec la réalité professionnelle et pourrait bénéficier de schémas ou diagrammes pour une meilleure compréhension. Les cas d'usage pratiques sont bien représentés, notamment avec des exemples de création de tables et de gestion de contraintes.",
+              "preuves": [
+                "CREATE TABLE emp(... idDept INTEGER, FOREIGN KEY (idDept) REFERENCES Dept(idDept), ...)",
+                "CHECK (salaireEmp > 1200 AND salaireEmp < 10000)",
+                "CONSTRAINT contNoClient CHECK(IdClient > 0 AND IdClient < 100000)"
+              ],
+              "forces": [
+                "Présence de nombreux exemples concrets et d'illustrations",
+                "Variété de cas d'usage pratiques",
+                "Utilisation de code SQL pour démontrer les concepts"
+              ],
+              "faiblesses": [
+                "Manque de liens explicites avec la réalité professionnelle",
+                "Absence de schémas ou diagrammes pour une meilleure visualisation",
+                "Certains concepts pourraient être mieux expliqués avec des exemples supplémentaires"
+              ],
+              "recommandations": [
+                "Inclure des exemples de cas réels pour montrer l'application des contraintes d'intégrité dans des scénarios professionnels",
+                "Ajouter des schémas ou diagrammes pour aider à la compréhension des relations entre les tables et les contraintes",
+                "Fournir plus d'explications détaillées pour les concepts les plus complexes, avec des exemples supplémentaires si nécessaire"
+              ]
+            },
+            "exercices_activites": {
+              "score": 2.0,
+              "commentaire": "Le contenu fourni est une présentation technique détaillée sur les contraintes d'intégrité dans les bases de données, notamment dans le contexte de SQL. Il aborde divers aspects tels que les contraintes d'intégrité statique et dynamique, les clés primaires, les clés étrangères, les contraintes de colonne, et les déclencheurs. Cependant, lors de l'évaluation selon les indicateurs d'exercices et d'activités, il est évident que le contenu manque d'éléments interactifs ou d'apprentissage pratique. Il n'y a pas d'exercices d'application, d'activités pratiques, de questions de réflexion, de travaux dirigés, ou de projets proposés pour aider les apprenants à mettre en pratique leurs connaissances. Par conséquent, le contenu est principalement informatif et théorique, ce qui limite son potentiel pour favoriser un apprentissage actif et interactif.",
+              "preuves": [
+                "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+                "CREATE TABLE emp(... idDept INTEGER, FOREIGN KEY (idDept) REFERENCES Dept(idDept), ...)"
+              ],
+              "forces": [
+                "Présentation détaillée et technique des concepts de contraintes d'intégrité",
+                "Exemples de code SQL pour illustrer les concepts"
+              ],
+              "faiblesses": [
+                "Manque d'éléments interactifs pour favoriser l'apprentissage actif",
+                "Absence d'exercices pratiques ou de projets pour appliquer les connaissances"
+              ],
+              "recommandations": [
+                "Inclure des exercices d'application et des activités pratiques pour les apprenants",
+                "Proposer des questions de réflexion et des travaux dirigés pour encourager la pensée critique et la résolution de problèmes"
+              ]
+            },
+            "methodes_evaluation": {
+              "score": 0,
+              "commentaire": "Le contenu fourni ne répond pas aux indicateurs d'évaluation des apprentissages. Il s'agit d'un contenu technique sur les contraintes d'intégrité dans les bases de données, sans aucune mention de méthodes d'évaluation, de critères d'évaluation, de modalités d'évaluation variées, de grilles de correction, d'auto-évaluation ou de feedback constructif.",
+              "preuves": [
+                "Contrainte d’intégrité statique",
+                "TRIGGER (SQL :1999 )‏",
+                "CHECK (age > 18 and  sal> 0)"
+              ],
+              "forces": [],
+              "faiblesses": [
+                "Absence de méthodes d'évaluation",
+                "Absence de critères d'évaluation clairs",
+                "Absence de modalités d'évaluation variées",
+                "Absence de grilles de correction",
+                "Absence d'auto-évaluation proposée",
+                "Absence de feedback constructif"
+              ],
+              "recommandations": [
+                "Intégrer des méthodes d'évaluation des apprentissages",
+                "Définir des critères d'évaluation clairs et précis",
+                "Proposer des modalités d'évaluation variées",
+                "Créer des grilles de correction pour évaluer les apprentissages",
+                "Proposer des activités d'auto-évaluation pour les apprenants",
+                "Fournir des feedback constructifs pour améliorer les apprentissages"
+              ]
+            },
+            "resume_conclusion": {
+              "score": 2.0,
+              "commentaire": "Le contenu présenté est une collection de notes et de concepts liés aux contraintes d'intégrité dans les bases de données, notamment dans le contexte de SQL. Il aborde divers types de contraintes comme les clés primaires, les clés étrangères, les contraintes de colonne, et les déclencheurs. Cependant, il manque une synthèse ou une conclusion qui résumerait les points clés, qui est un élément essentiel pour aider les apprenants à consolider leurs connaissances. De plus, le contenu est présenté de manière très fragmentée et technique, ce qui pourrait rendre sa compréhension difficile pour les débutants ou ceux qui n'ont pas une base solide en bases de données.",
+              "preuves": [
+                "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+                "CREATE TABLE emp(... idDept INTEGER, FOREIGN KEY (idDept) REFERENCES Dept(idDept), ...)"
+              ],
+              "forces": [
+                "Couverture de divers types de contraintes d'intégrité",
+                "Exemples de code SQL pour illustrer les concepts"
+              ],
+              "faiblesses": [
+                "Manque de synthèse ou de conclusion",
+                "Présentation très technique et fragmentée"
+              ],
+              "recommandations": [
+                "Ajouter une introduction et une conclusion pour encadrer le contenu et aider à la consolidation des apprentissages",
+                "Inclure des exemples concrets et des cas d'étude pour illustrer l'application pratique des concepts",
+                "Réorganiser le contenu pour le rendre plus fluide et facile à suivre"
+              ]
+            },
+            "references_ressources": {
+              "score": 2.0,
+              "commentaire": "Le contenu éducatif présente des informations techniques détaillées sur les contraintes d'intégrité dans les bases de données, notamment les contraintes statiques et dynamiques, les clés primaires, les clés étrangères, les déclencheurs, etc. Cependant, il manque de références et de ressources complémentaires pour soutenir ces informations. Les sources ne sont pas clairement identifiées, et il n'y a pas de bibliographie présente. De plus, les liens externes et la documentation technique sont absents.",
+              "preuves": [
+                "Contrainte d’intégrité statique –respectée pour chacun des états de la BD",
+                "CREATE TABLE emp(... idDept INTEGER, FOREIGN KEY ( idDept) REFERENCES Dept(idDept), ...)"
+              ],
+              "forces": [
+                "Présence de concepts techniques détaillés sur les contraintes d'intégrité",
+                "Exemples de code SQL pour illustrer les concepts"
+              ],
+              "faiblesses": [
+                "Manque de références et de ressources complémentaires",
+                "Absence de bibliographie et de liens externes",
+                "Pas de documentation technique"
+              ],
+              "recommandations": [
+                "Ajouter des références et des ressources complémentaires pour soutenir les informations techniques",
+                "Inclure une bibliographie et des liens externes pertinents pour permettre aux étudiants de approfondir leurs connaissances",
+                "Fournir une documentation technique pour aider les étudiants à comprendre les concepts"
+              ]
+            }
+          }
+        },
+        "analysis": {
+          "mandatory_sections": {
+            "found_sections": [
+              "introduction",
+              "objectifs",
+              "contenu principal",
+              "conclusion"
+            ],
+            "missing_sections": [],
+            "completion_rate": 100.0
+          },
+          "elements_count": {
+            "examples_count": 5,
+            "exercises_count": 5
+          },
+          "global_recommendations": {
+            "forces": [
+              "Présence de concepts techniques détaillés sur les contraintes d'intégrité",
+              "Présence de nombreux exemples concrets pour illustrer les concepts",
+              "Exemples pertinents pour illustrer les concepts",
+              "Couverture de différents types de contraintes d'intégrité",
+              "Utilisation de syntaxe SQL pour expliquer les notions de contraintes d'intégrité"
+            ],
+            "faiblesses": [
+              "Pas de prérequis mentionnés pour la compréhension du contenu",
+              "Absence de feedback constructif",
+              "Présentation très technique et fragmentée",
+              "Manque de références et de ressources complémentaires",
+              "Absence d'introduction et d'objectifs pédagogiques clairs"
+            ],
+            "recommandations_prioritaires": [
+              "Amélioration de la structure générale",
+              "Ajout d'exemples et d'exercices",
+              "Clarification des objectifs"
+            ],
+            "recommandations_detaillees": [
+              "Inclure des exemples plus variés pour illustrer les différents types de contraintes et déclencheurs",
+              "Ajouter une introduction et une conclusion pour encadrer le contenu et aider à la consolidation des apprentissages",
+              "Créer des grilles de correction pour évaluer les apprentissages",
+              "Réorganiser certaines sections pour améliorer la fluidité du texte",
+              "Ajouter une introduction claire qui présente les objectifs pédagogiques et le contexte du cours",
+              "Proposer des questions de réflexion et des travaux dirigés pour encourager la pensée critique et la résolution de problèmes",
+              "Inclure des exemples concrets et des cas d'étude pour illustrer l'application pratique des concepts",
+              "Ajouter des références et des ressources complémentaires pour soutenir les informations techniques",
+              "Proposer des activités d'auto-évaluation pour les apprenants",
+              "Définir des critères d'évaluation clairs et précis"
+            ]
+          }
+        },
+        "raw_data": {
+          "extracted_text_preview": "08/12/2009\n1\nContrainte d’intégrité\nContrainte d'intégrité statique\n–respectée pour chacun desétats delaBD\n–mécanisme déclaratif\nPRIMARY KEY, UNIQUE, NOT NULL, DOMAIN, FOREIGN KEY, CHECK,\nASSERTION\n–procédural\nTRIGGER (SQL :1999 )‏\nContrainte d'intégrité dynamique\n–contrainte surchangements d'états (unchangement ->unchangement ->etc..)‏\n–référence auxétats successifs delabase\n–TRIGGER\nContrainte colonne\nTypes SQL\nINTEGER\nCHAR\n...\nNOT NULL\nCHECK\nCREATE DOMAIN ( SQL, pas disponible pour Ora...",
+          "pdf_statistics": {
+            "page_count": 1,
+            "word_count": 4877
+          }
+        }
+      },
+      "synthesis": {
+        "critical_issues": [
+          "Chapitre 'Document complet' non conforme"
+        ],
+        "priority_recommendations": [
+          "Fournir des introductions et des conclusions claires pour chaque section",
+          "Inclure des références bibliographiques ou des ressources pour approfondir les connaissances",
+          "Définir clairement les objectifs d'apprentissage et les compétences à acquérir",
+          "Réviser le contenu pour le rendre plus accessible et progressif",
+          "Équilibrer le volume de contenu avec des activités de cours, TD et TP"
+        ],
+        "overall_conformity": "non_conforme",
+        "improvement_areas": [
+          "objectifs",
+          "competences",
+          "references",
+          "volume"
+        ]
+      },
+      "recommendations": [
+        {
+          "priority": "high",
+          "message": "Fournir des introductions et des conclusions claires pour chaque section"
+        },
+        {
+          "priority": "high",
+          "message": "Inclure des références bibliographiques ou des ressources pour approfondir les connaissances"
+        },
+        {
+          "priority": "high",
+          "message": "Définir clairement les objectifs d'apprentissage et les compétences à acquérir"
+        },
+        {
+          "priority": "high",
+          "message": "Réviser le contenu pour le rendre plus accessible et progressif"
+        },
+        {
+          "priority": "high",
+          "message": "Équilibrer le volume de contenu avec des activités de cours, TD et TP"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "metadata": {
+    "created_date": "2025-01-09",
+    "last_updated": "2025-09-28T13:35:58.563839",
+    "total_audits": 17,
+    "version": "1.0"
+  },
+  "audits": [
+    {
+      "id": 1,
+      "filename": "cours-sql-sh-.pdf",
+      "audit_date": "2025-09-01T20:45:33.803588",
+      "final_score": 0.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_cours-sql-sh-.pdf_20250901_204533.json",
+      "word_count": 17682
+    },
+    {
+      "id": 2,
+      "filename": "cours SQL.pdf",
+      "audit_date": "2025-09-01T20:48:01.046961",
+      "final_score": 0.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_cours_SQL.pdf_20250901_204801.json",
+      "word_count": 4877
+    },
+    {
+      "id": 3,
+      "filename": "cours SQL.pdf",
+      "audit_date": "2025-09-01T20:57:38.652770",
+      "final_score": 51.6,
+      "grade": "D",
+      "json_file": "data/audits\\audit_cours_SQL.pdf_20250901_205738.json",
+      "word_count": 4877
+    },
+    {
+      "id": 4,
+      "filename": "sql.pdf",
+      "audit_date": "2025-09-01T21:10:32.203643",
+      "final_score": 54.2,
+      "grade": "E",
+      "json_file": "data/audits\\audit_sql.pdf_20250901_211032.json",
+      "word_count": 16956
+    },
+    {
+      "id": 5,
+      "filename": "sql.pdf",
+      "audit_date": "2025-09-01T21:20:38.996537",
+      "final_score": 54.2,
+      "grade": "E",
+      "json_file": "data/audits\\audit_sql.pdf_20250901_212038.json",
+      "word_count": 192516
+    },
+    {
+      "id": 6,
+      "filename": "poly2013.pdf",
+      "audit_date": "2025-09-01T22:04:43.521817",
+      "final_score": 0.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_poly2013.pdf_20250901_220443.json",
+      "word_count": 8739
+    },
+    {
+      "id": 7,
+      "filename": "poly2013.pdf",
+      "audit_date": "2025-09-01T22:08:40.798584",
+      "final_score": 0.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_poly2013.pdf_20250901_220840.json",
+      "word_count": 8739
+    },
+    {
+      "id": 8,
+      "filename": "module_cours SQL.pdf",
+      "audit_date": "2025-09-02T01:17:31.174940",
+      "final_score": 30.96,
+      "grade": "E",
+      "json_file": "data/audits\\audit_module_cours_SQL.pdf_20250902_011731.json",
+      "word_count": 4877
+    },
+    {
+      "id": 9,
+      "filename": "module_test.pdf",
+      "audit_date": "2025-09-25T14:11:57.262508",
+      "final_score": 60.0,
+      "grade": "C",
+      "json_file": "data/audits\\audit_module_test.pdf_20250925_141157.json",
+      "word_count": 126
+    },
+    {
+      "id": 10,
+      "filename": "Cahier de charges_pv_equivalence.pdf",
+      "audit_date": "2025-09-25T14:14:12.169561",
+      "final_score": 0.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_Cahier_de_charges_pv_equivalence.pdf_20250925_141412.json",
+      "word_count": 862
+    },
+    {
+      "id": 11,
+      "filename": "module_test.pdf",
+      "audit_date": "2025-09-25T14:17:50.180902",
+      "final_score": 54.0,
+      "grade": "D",
+      "json_file": "data/audits\\audit_module_test.pdf_20250925_141750.json",
+      "word_count": 63
+    },
+    {
+      "id": 12,
+      "filename": "module_test.pdf",
+      "audit_date": "2025-09-25T14:20:30.083320",
+      "final_score": 55.0,
+      "grade": "C",
+      "json_file": "data/audits\\audit_module_test.pdf_20250925_142030.json",
+      "word_count": 63
+    },
+    {
+      "id": 13,
+      "filename": "module_test.pdf",
+      "audit_date": "2025-09-25T14:47:39.787274",
+      "final_score": 55.0,
+      "grade": "C",
+      "json_file": "data/audits\\audit_module_test.pdf_20250925_144739.json",
+      "word_count": 63
+    },
+    {
+      "id": 14,
+      "filename": "LangageSQL.pdf",
+      "audit_date": "2025-09-28T12:49:13.589086",
+      "final_score": 55.6,
+      "grade": "C",
+      "json_file": "data/audits\\audit_LangageSQL.pdf_20250928_124913.json",
+      "word_count": 2833
+    },
+    {
+      "id": 15,
+      "filename": "cours SQL.pdf",
+      "audit_date": "2025-09-28T13:26:55.164138",
+      "final_score": 48.6,
+      "grade": "D",
+      "json_file": "data/audits\\audit_cours_SQL.pdf_20250928_132655.json",
+      "word_count": 4877
+    },
+    {
+      "id": 16,
+      "filename": "Programmer en langage C  Cours et exercices corrigés - 5ème Edition.pdf",
+      "audit_date": "2025-09-28T13:30:28.162587",
+      "final_score": 100.0,
+      "grade": "A",
+      "json_file": "data/audits\\audit_Programmer_en_langage_C__Cours_et_exercices_corrigés_-_5ème_Edition.pdf_20250928_133028.json",
+      "word_count": 88989
+    },
+    {
+      "id": 17,
+      "filename": "Pratique de MySQL et PHP.pdf",
+      "audit_date": "2025-09-28T13:35:58.559839",
+      "final_score": 0.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_Pratique_de_MySQL_et_PHP.pdf_20250928_133558.json",
+      "word_count": 175560
+    }
+  ]
+}

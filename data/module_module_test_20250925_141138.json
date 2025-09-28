@@ -1,0 +1,60 @@
+{
+  "filename": "module_module_test.pdf",
+  "extraction_date": "2025-09-25T14:11:38.142682",
+  "statistics": {
+    "word_count": 63,
+    "character_count": 493,
+    "line_count": 16
+  },
+  "top_keywords": [
+    [
+      "python",
+      5
+    ],
+    [
+      "activité",
+      4
+    ],
+    [
+      "programmation",
+      2
+    ],
+    [
+      "chapitre",
+      2
+    ],
+    [
+      "titre",
+      1
+    ],
+    [
+      "module",
+      1
+    ],
+    [
+      "avancée",
+      1
+    ],
+    [
+      "objectifs",
+      1
+    ],
+    [
+      "pédagogiques",
+      1
+    ],
+    [
+      "comprendre",
+      1
+    ]
+  ],
+  "extracted_data": {
+    "emails": [],
+    "urls": [],
+    "dates": []
+  },
+  "content_preview": "Titre du module:\nProgrammation avancée en Python\nObjectifs pédagogiques:\n- Comprendre la POO\n- Maîtriser les bibliothèques standards\nCompétences visées:\nDévelopper des applications robustes en Python\nChapitre 1: Introduction\nActivité 1.1: Présentation du cours\nActivité 1.2: Discussion en groupe\nChapitre 2: Programmation en Python\nActivité 2.1: Variables et types\nActivité 2.2: Structures conditionnelles\nRéférences bibliographiques:\n- Python Documentation\n- Livre: Apprendre Python, Eyrolles",
+  "full_content": "Titre du module:\nProgrammation avancée en Python\nObjectifs pédagogiques:\n- Comprendre la POO\n- Maîtriser les bibliothèques standards\nCompétences visées:\nDévelopper des applications robustes en Python\nChapitre 1: Introduction\nActivité 1.1: Présentation du cours\nActivité 1.2: Discussion en groupe\nChapitre 2: Programmation en Python\nActivité 2.1: Variables et types\nActivité 2.2: Structures conditionnelles\nRéférences bibliographiques:\n- Python Documentation\n- Livre: Apprendre Python, Eyrolles",
+  "file_type": "document",
+  "original_path": "data/uploads\\module_module_test.pdf"
+}

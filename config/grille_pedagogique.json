@@ -1,0 +1,137 @@
+{
+  "metadata": {
+    "name": "Grille d'Évaluation Pédagogique",
+    "version": "1.0",
+    "description": "Grille d'évaluation complète pour l'audit de contenus pédagogiques",
+    "max_score": 100,
+    "created_date": "2025-01-09"
+  },
+  "criteria": {
+    "introduction_objectifs": {
+      "name": "Introduction & Objectifs",
+      "description": "Présence et clarté de l'introduction et des objectifs pédagogiques",
+      "weight": 15,
+      "max_score": 5,
+      "indicators": [
+        "Présence d'une introduction claire",
+        "Objectifs pédagogiques explicites",
+        "Compétences visées définies",
+        "Public cible identifié",
+        "Prérequis mentionnés"
+      ]
+    },
+    "structure_progression": {
+      "name": "Structure & Progression Logique",
+      "description": "Organisation logique et progression pédagogique du contenu",
+      "weight": 15,
+      "max_score": 5,
+      "indicators": [
+        "Plan structuré et visible",
+        "Progression logique des concepts",
+        "Transitions entre sections",
+        "Hiérarchisation des informations",
+        "Cohérence globale"
+      ]
+    },
+    "clarte_langage": {
+      "name": "Clarté du Langage",
+      "description": "Qualité de la rédaction et accessibilité du vocabulaire",
+      "weight": 12,
+      "max_score": 5,
+      "indicators": [
+        "Vocabulaire adapté au niveau",
+        "Phrases claires et concises",
+        "Définitions des termes techniques",
+        "Style pédagogique approprié",
+        "Absence d'ambiguïtés"
+      ]
+    },
+    "exemples_concrets": {
+      "name": "Exemples Concrets",
+      "description": "Présence et qualité des exemples illustratifs",
+      "weight": 12,
+      "max_score": 5,
+      "indicators": [
+        "Exemples pertinents et variés",
+        "Illustrations concrètes",
+        "Cas d'usage pratiques",
+        "Schémas ou diagrammes",
+        "Liens avec la réalité professionnelle"
+      ]
+    },
+    "exercices_activites": {
+      "name": "Exercices & Activités",
+      "description": "Présence et qualité des activités d'apprentissage",
+      "weight": 15,
+      "max_score": 5,
+      "indicators": [
+        "Exercices d'application",
+        "Activités pratiques",
+        "Questions de réflexion",
+        "Travaux dirigés",
+        "Projets ou études de cas"
+      ]
+    },
+    "methodes_evaluation": {
+      "name": "Méthodes d'Évaluation",
+      "description": "Présence de modalités d'évaluation des apprentissages",
+      "weight": 10,
+      "max_score": 5,
+      "indicators": [
+        "Critères d'évaluation définis",
+        "Modalités d'évaluation variées",
+        "Grilles de correction",
+        "Auto-évaluation proposée",
+        "Feedback constructif"
+      ]
+    },
+    "resume_conclusion": {
+      "name": "Résumé / Conclusion",
+      "description": "Présence d'une synthèse et conclusion appropriée",
+      "weight": 10,
+      "max_score": 5,
+      "indicators": [
+        "Résumé des points clés",
+        "Conclusion structurée",
+        "Récapitulatif des apprentissages",
+        "Ouverture vers la suite",
+        "Consolidation des acquis"
+      ]
+    },
+    "references_ressources": {
+      "name": "Références & Ressources",
+      "description": "Qualité et pertinence des références et ressources complémentaires",
+      "weight": 11,
+      "max_score": 5,
+      "indicators": [
+        "Bibliographie présente",
+        "Sources fiables et récentes",
+        "Ressources complémentaires",
+        "Liens externes pertinents",
+        "Documentation technique"
+      ]
+    }
+  },
+  "grading_scale": {
+    "A": {"min_score": 85, "max_score": 100, "description": "Excellent - Contenu pédagogique de très haute qualité"},
+    "B": {"min_score": 70, "max_score": 84, "description": "Bien - Contenu pédagogique de bonne qualité avec quelques améliorations possibles"},
+    "C": {"min_score": 55, "max_score": 69, "description": "Satisfaisant - Contenu pédagogique acceptable nécessitant des améliorations"},
+    "D": {"min_score": 40, "max_score": 54, "description": "Insuffisant - Contenu pédagogique nécessitant des améliorations importantes"},
+    "E": {"min_score": 0, "max_score": 39, "description": "Très insuffisant - Contenu pédagogique nécessitant une refonte complète"}
+  },
+  "mandatory_sections": [
+    "introduction",
+    "objectifs",
+    "contenu principal",
+    "conclusion"
+  ],
+  "keywords": {
+    "introduction_objectifs": ["introduction", "objectif", "but", "compétence", "prérequis", "public", "cible"],
+    "structure_progression": ["plan", "sommaire", "chapitre", "section", "partie", "étape"],
+    "exemples_concrets": ["exemple", "illustration", "cas", "pratique", "concret", "application"],
+    "exercices_activites": ["exercice", "activité", "travail", "pratique", "application", "projet"],
+    "methodes_evaluation": ["évaluation", "test", "contrôle", "examen", "note", "correction"],
+    "resume_conclusion": ["résumé", "conclusion", "synthèse", "bilan", "récapitulatif"],
+    "references_ressources": ["référence", "bibliographie", "source", "ressource", "lien", "documentation"]
+  }
+}
