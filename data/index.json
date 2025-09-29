@@ -1,8 +1,8 @@
 {
   "metadata": {
     "created_date": "2025-01-09",
-    "last_updated": "2025-09-28T16:38:38.090604",
-    "total_audits": 19,
+    "last_updated": "2025-09-29T13:02:02.443002",
+    "total_audits": 22,
     "version": "1.0"
   },
   "audits": [
@@ -176,6 +176,33 @@
       "grade": "B",
       "json_file": "data/audits\\audit_courscomplet.pdf_20250928_163838.json",
       "word_count": 18338
+    },
+    {
+      "id": 20,
+      "filename": "cours SQL.pdf",
+      "audit_date": "2025-09-29T12:52:05.220832",
+      "final_score": 24.0,
+      "grade": "E",
+      "json_file": "data/audits\\audit_cours_SQL.pdf_20250929_125205.json",
+      "word_count": 5136
+    },
+    {
+      "id": 21,
+      "filename": "courscomplet.pdf",
+      "audit_date": "2025-09-29T12:58:09.406692",
+      "final_score": 80.0,
+      "grade": "B",
+      "json_file": "data/audits\\audit_courscomplet.pdf_20250929_125809.json",
+      "word_count": 18338
+    },
+    {
+      "id": 22,
+      "filename": "cours SQL.pdf",
+      "audit_date": "2025-09-29T13:02:02.433050",
+      "final_score": 38.8,
+      "grade": "E",
+      "json_file": "data/audits\\audit_cours_SQL.pdf_20250929_130202.json",
+      "word_count": 5136
     }
   ]
 }
